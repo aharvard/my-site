@@ -2,3 +2,5 @@
 _export/
 .build/
 .vscode/
+
+config.codekit3
