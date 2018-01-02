@@ -406,7 +406,7 @@ COMPONENTS
 
 /* component: global footer */
 .global-footer {
-	background: white;
+	background: var(--link-color);
 	padding: 1rem;
 }
 
@@ -418,17 +418,21 @@ COMPONENTS
 	margin: 2rem 0 1rem;
 }
 
-.footer-stamp--img {
-	max-width: 300px;
+.footer-stamp--stars {
+	height: 50px;
+	width: 50px;
 	margin: 0 auto 2rem;
+	fill: white;
+	/* outline: 2px solid white; */
 }
 
 
 .footer-stamp--copyright {
-	font-size: 1rem;
-	/* text-transform: uppercase; */
+	color: var(--medium-light-gray);
 	font-family: var(--heading-font);
-	/* letter-spacing: .2rem; */
+	font-size: .5rem;
+	text-transform: uppercase;
+	letter-spacing: .5ch;
 }
 
 .porfolio-page img {
