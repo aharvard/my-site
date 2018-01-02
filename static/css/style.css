@@ -422,8 +422,7 @@ COMPONENTS
 	height: 50px;
 	width: 50px;
 	margin: 0 auto 2rem;
-	fill: white;
-	/* outline: 2px solid white; */
+	fill: var(--medium-light-gray);
 }
 
 
