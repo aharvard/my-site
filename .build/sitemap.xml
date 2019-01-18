@@ -26,11 +26,6 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>/posts/bank-marketing-ux-design.html</loc>
-        <changefreq>daily</changefreq>
-        <priority>1.0</priority>
-    </url>
-    <url>
         <loc>/posts/data-journalism-tool.html</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
@@ -47,6 +42,11 @@
     </url>
     <url>
         <loc>/posts/stop-motion-videos.html</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>/posts/website-wireframes.html</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
@@ -101,6 +101,11 @@
         <priority>1.0</priority>
     </url>
     <url>
+        <loc>/posts/regions-design-system.html</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
         <loc>/posts/cell-phone-interaction-design.html</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
@@ -127,6 +132,16 @@
     </url>
     <url>
         <loc>/posts/wedding-print-design.html</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>/posts/simpeo-calculator.html</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>/posts/simpeo-componnents.html</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
