@@ -39,7 +39,6 @@ small,
 strike,
 strong,
 sub,
-sup,
 tt,
 var,
 b,
@@ -171,7 +170,7 @@ table {
 TYPOGRAPHY
 ***************************************************/
 html {
-  font-size: 24px;
+  font-size: 1.25em;
   color: var(--dark-gray);
 }
 @media (max-width: 600px) {
@@ -249,7 +248,13 @@ p {
   max-width: 55ch;
 }
 
-p a {
+em {
+  font-style: italic;
+}
+
+.about a,
+.contact a,
+.resume a {
   position: relative;
   display: inline-block;
   outline: none;
@@ -258,13 +263,18 @@ p a {
   color: var(--link-color);
   overflow: hidden;
 }
-p a::before,
-p a::after {
+
+.contact a::before,
+.contact a::after,
+.resume a::before,
+.resume a::after {
   pointer-events: none;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
-p a::before {
+.about a::before,
+.contact a::before,
+.resume a::before {
   position: absolute;
   top: 0;
   left: 0;
@@ -278,8 +288,12 @@ p a::before {
   -webkit-transform: translateY(95%);
   transform: translateY(95%);
 }
-p a:hover::before,
-p a:focus::before {
+.about a:hover::before,
+.about a:focus::before,
+.contact a:hover::before,
+.contact a:focus::before,
+.resume a:hover::before,
+.resume a:focus::before {
   -webkit-transform: translateY(0);
   transform: translateY(0);
   background-color: rgba(211, 74, 74, 0.2);
@@ -347,6 +361,12 @@ main {
   max-width: 1200px;
 }
 
+@media (min-width: 739px) {
+  main {
+    padding: 0 2rem 1rem;
+  }
+}
+
 .about,
 .resume,
 .contact,
@@ -406,7 +426,7 @@ COMPONENTS
   flex: 1;
   font-size: 1rem;
   line-height: 1;
-  padding: 1rem;
+  padding: 0 1rem;
 }
 
 .site-nav {
@@ -431,7 +451,8 @@ COMPONENTS
   margin: 0 1rem;
 }
 
-.site-nav--item a {
+.site-nav--item a,
+.site-header--logo a {
   width: 100%;
   color: var(--link-color);
   padding: 1rem 0;
@@ -441,9 +462,8 @@ COMPONENTS
   transition: background 500ms ease;
   z-index: 2;
 }
-
-.site-nav--item a:hover,
-.site-nav--item a:focus {
+.site-header--logo a {
+  color: var(--dark-gray);
 }
 
 .site-nav--item__active a {
@@ -529,7 +549,7 @@ COMPONENTS
 .global-footer {
   background: var(--link-color);
   padding: 1rem;
-  margin-top: 5rem;
+  margin-top: 3rem;
 }
 
 /* component: footer stamp */
@@ -583,10 +603,10 @@ COMPONENTS
 }
 
 .resume-item--meta-info {
-  flex: 0 0 9rem;
+  flex: 0 0 12rem;
   display: flex;
   flex-direction: column;
-  margin-right: 1rem;
+  margin-right: 3rem;
   width: 100%;
 }
 
@@ -615,7 +635,7 @@ COMPONENTS
   font-size: 2rem;
   line-height: 1;
   padding: 0;
-  margin: 0;
+  margin: 0 0 1.5rem;
 }
 
 .resume-item--meta-city,
@@ -625,12 +645,24 @@ COMPONENTS
   font-weight: 900;
   /* text-transform: uppercase; */
   font-size: 1rem;
+  /* line-height: 1; */
 }
 
 .resume-item--description {
   flex: 1 1 auto;
   width: 100%;
   margin-top: -2px;
+}
+
+.resume-item--list {
+  list-style-type: disc;
+  /* font-size: 0.9rem; */
+  /* margin-top: 0.25em; */
+  padding-left: 1rem;
+}
+
+.resume-item--list-item {
+  margin-bottom: 1rem;
 }
 
 @media (max-width: 600px) {
@@ -835,7 +867,7 @@ COMPONENTS
   }
 
   .site-header--logo {
-    font-size: 2rem;
+    /* font-size: 2rem; */
     text-align: left;
     margin: 0;
     padding: 0;
