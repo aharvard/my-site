@@ -3,7 +3,7 @@ title: Web Components
 date: '2016-09-01T23:46:37.121Z'
 template: 'post'
 draft: false
-slug: '/posts/perfecting-the-art-of-perfection/'
+slug: '/posts/web-components/'
 category: 'Tech'
 tags:
   - 'Handwriting'
