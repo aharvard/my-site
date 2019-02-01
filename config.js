@@ -2,37 +2,36 @@
 
 module.exports = {
   url: 'https://lumen.netlify.com',
-  title: 'Blog by John Doe',
-  subtitle: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
+  title: "Andrew's Blog",
+  subtitle:
+    'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
   copyright: '© All rights reserved.',
   disqusShortname: '',
   postsPerPage: 4,
-  googleAnalyticsId: 'UA-73379983-2',
+  googleAnalyticsId: '#',
   menu: [
     {
       label: 'Articles',
       path: '/'
     },
     {
-      label: 'About me',
+      label: 'About',
       path: '/pages/about'
     },
     {
-      label: 'Contact me',
+      label: 'Contact',
       path: '/pages/contacts'
     }
   ],
   author: {
-    name: 'John Doe',
+    name: 'Andrew Harvard',
     photo: '/photo.jpg',
-    bio: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
+    bio:
+      "Hi! I'm a designer/Developer hybrid experienced in design systems and React. Provides senior-level UX/ UI design direction and executes accessible HTML and modern CSS. Sharp eye for typography, spacing, and color. Currently honing vanilla JavaScript skills. Enjoys working in the JAM stack.",
     contacts: {
-      email: '#',
-      telegram: '#',
-      twitter: '#',
-      github: '#',
-      rss: '#',
-      vkontakte: '#'
+      email: 'andrew.t.harvard@gmail.com',
+      twitter: 'aharvard',
+      github: 'aharvard'
     }
   }
 };
