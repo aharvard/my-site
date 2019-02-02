@@ -14,11 +14,42 @@ tags:
   - Handwriting
   - Learning to write
 ---
+https://shoptalkshow.com/episodes/276-web-components/
 
-Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui. Praesent blandit dolor. Sed non quam. In vel mi sit amet augue congue elementum.
+https://maedium.com/@thangman22/stencil-js-vs-lit-element-vs-vanilla-vs-shadow-dom-vs-vue-js-5d2ade971183
 
-![Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus](/media/image-2.jpg)
+https://webcomponents.club/
 
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis.
+https://codepen.io/andybelldesign/pen/ZREjYg
 
-Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.
+https://github.com/skatejs/skatejs
+
+https://github.com/Polymer/lit-element
+
+https://github.com/GoogleChromeLabs/howto-components
+
+https://wicg.github.io/aom/spec/
+
+https://www.udemy.com/web-components-stenciljs-build-custom-html-elements/learn/v4/questions/
+
+https://www.youtube.com/watch?v=hdSz1EKjK10&feature=youtu.be
+
+https://www.youtube.com/watch?v=UfD-k7aHkQE
+
+https://robdodson.me/the-future-of-accessibility-for-custom-elements/
+
+https://stenciljs.com/docs/styling
+
+https://stenciljs.com/
+
+https://www.webcomponents.org/
+
+https://ionic-team.github.io/stencil-present/
+
+https://lit-html.polymer-project.org/
+
+https://43081j.com/2018/08/future-of-polymer
+
+https://developer.mozilla.org/en-US/docs/Web/Web_Components
+
+https://custom-elements-everywhere.com/
