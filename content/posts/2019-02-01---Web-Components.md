@@ -1,11 +1,11 @@
 ---
 template: post
-title: Web Components Design Systems
+title: Web Components, a Design System's Best Friend
 slug: /posts/web-components/
 draft: false
 date: 2019-02-01T19:30:37.121Z
 description: >-
-  Web components
+  Web components are ideal candidates for delivering design systems in organizations where tech stacks rely on a variety of frontend frameworks and libraries. They reduce dependance hell by encapsulating styling and functionality. Write once and use them wherever HTML works. However, Web Components may not be great candidates for full blown single page apps due to some temporary accessibility limitation with the shadow DOM spec—fear not, browser support is on the way.
 category: Code
 tags:
   - Design System
@@ -29,25 +29,21 @@ In this [intro article](https://www.webcomponents.org/introduction) webcomponent
 
 > ... a set of web platform APIs that allow you to create new custom, reusable, encapsulated HTML tags to use in web pages and web apps... [web components] work across modern browsers, and can be used with any JavaScript library or framework that works with HTML.
 
-## Use HTML?
+## How do Web Components empower designs systems?
 
-## Encapsulated styling and custom behavior
+### Encapsulated styling and custom behavior
 
-## Design System
+### Inclusive Design Delivery
 
-## Links to be organized
+## More on Web Components
 
-https://medium.com/@thangman22/stencil-js-vs-lit-element-vs-vanilla-vs-shadow-dom-vs-vue-js-5d2ade971183
+Web Component [Tooling Benchmarks — Aug 2017](https://medium.com/@thangman22/stencil-js-vs-lit-element-vs-vanilla-vs-shadow-dom-vs-vue-js-5d2ade971183)
 
-https://webcomponents.club/
+Andy Bell [documents his journey](https://webcomponents.club/) about learning web components and makes cool demos like [vanilla custom element with shadow DOM](https://codepen.io/andybelldesign/pen/ZREjYg) & [Simple "Done" App](https://codepen.io/hankchizljaw/project/editor/a7eeabf2783faf9dfb447c8652721b2f)
 
-https://codepen.io/andybelldesign/pen/ZREjYg
+Some tools that make working with web components enjoyable: [Stencil](https://stenciljs.com/), [Skate](https://github.com/skatejs/skatejs), [LitElement](https://github.com/Polymer/lit-element)
 
-https://github.com/skatejs/skatejs
-
-https://github.com/Polymer/lit-element
-
-https://github.com/GoogleChromeLabs/howto-components
+[HowTo: Components](https://github.com/GoogleChromeLabs/howto-components) repo provides example web component patterns focused on accessibility, performance, and progressive enhancement
 
 https://wicg.github.io/aom/spec/
 
@@ -58,10 +54,6 @@ https://www.youtube.com/watch?v=hdSz1EKjK10&feature=youtu.be
 https://www.youtube.com/watch?v=UfD-k7aHkQE
 
 https://robdodson.me/the-future-of-accessibility-for-custom-elements/
-
-https://stenciljs.com/docs/styling
-
-https://stenciljs.com/
 
 https://www.webcomponents.org/
 
