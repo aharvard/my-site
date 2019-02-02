@@ -27,7 +27,7 @@ module.exports = {
     name: 'Andrew Harvard',
     photo: '/photo.jpg',
     bio:
-      "Hi! I'm a designer/Developer hybrid experienced in design systems and React. Provides senior-level UX/ UI design direction and executes accessible HTML and modern CSS. Sharp eye for typography, spacing, and color. Currently honing vanilla JavaScript skills. Enjoys working in the JAM stack.",
+      "This blog contains my thoughts and experinces. I primarly use it as a documentaiton tool for my futrue self. I hope others can find a little use out of it as well!",
     contacts: {
       email: 'andrew.t.harvard@gmail.com',
       twitter: 'aharvard',
@@ -35,3 +35,4 @@ module.exports = {
     }
   }
 };
+ 
