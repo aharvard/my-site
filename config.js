@@ -4,7 +4,7 @@ module.exports = {
   url: 'https://lumen.netlify.com',
   title: "Andrew's Blog",
   subtitle:
-    'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
+    'This blog contains my thoughts and experiences. I primarily use it as a personal documentation tool, but I hope others can find a little use out of it as well.',
   copyright: '© All rights reserved.',
   disqusShortname: '',
   postsPerPage: 4,
@@ -27,7 +27,7 @@ module.exports = {
     name: 'Andrew Harvard',
     photo: '/photo.jpg',
     bio:
-      "This blog contains my thoughts and experinces. I primarly use it as a documentaiton tool for my futrue self. I hope others can find a little use out of it as well!",
+      'This blog contains my thoughts and experiences. I primarily use it as a personal documentation tool, but I hope others can find a little use out of it as well!',
     contacts: {
       email: 'andrew.t.harvard@gmail.com',
       twitter: 'aharvard',
@@ -35,4 +35,3 @@ module.exports = {
     }
   }
 };
- 
