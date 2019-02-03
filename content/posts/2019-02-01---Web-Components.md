@@ -2,7 +2,7 @@
 template: post
 title: Web Components in 2019
 slug: /posts/web-components-2019/
-draft: false
+draft: true
 date: 2019-01-31T19:30:37.121Z
 description: >-
   Web Components represent a collection of browser specifications that allow designers and developers to create and reuse custom HTML tags that can deliver scoped styles and custom behaviors

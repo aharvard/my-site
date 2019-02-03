@@ -1,8 +1,8 @@
 ---
 template: post
 title: Web Components, a Design System's Best Friend
-slug: /posts/design-stytems-and-web-components/
-draft: false
+slug: /posts/design-systems-and-web-components/
+draft: true
 date: 2019-02-01T19:30:37.121Z
 description: >-
   Web components are ideal candidates for delivering design systems in organizations where tech stacks rely on a variety of front-end frameworks and libraries. They can reduce dependency-hell and spaghetti-code by encapsulating styling and behavior—write once and use them wherever HTML works (polyfills required).
@@ -27,7 +27,7 @@ I wrote a post about [Web Components in 2019](/posts/web-components-2019/) that 
 
 ## How do Web Components empower designs systems?
 
-There are some many cool ways to make awesome websites nowadays. A lot of the most recent front-end tooling has empowered desginer and developers to collaborate more than ever before. Design deliverables are now extending all the way into the browser and design assets are being powered by code—wow.
+There are some many cool ways to make awesome websites nowadays. A lot of the most recent front-end tooling has empowered designer and developers to collaborate more than ever before. Design deliverables are now extending all the way into the browser and design assets are being powered by code—wow.
 
 ### Encapsulated styling and custom behavior
 
