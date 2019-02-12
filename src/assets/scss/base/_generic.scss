@@ -134,7 +134,7 @@ blockquote {
   border-radius: 1rem 1rem 1rem 0;
   font-style: italic;
   background: $color-gray-bg;
-  margin-bottom: 0;
+  margin: 0;
 }
 
 blockquote * {
@@ -145,24 +145,23 @@ figure {
   display: block;
   width: 100%;
   height: auto;
+  margin: 0;
 }
 
-figcaption {
+blockquote + figcaption {
   @include line-height(0.75);
   color: $color-base;
   font-size: $typographic-small-font-size;
   margin-bottom: 0;
   padding: 0.5rem;
-}
-
-blockquote + figcaption {
   background: #f7f7f7;
-  display: inline-block;
-  margin-left: 10rem;
+  display: block;
+  margin: 0;
   width: initial;
   border-radius: 0 0 1rem 1rem;
   padding: 0.75rem 1.5rem 1rem;
-  // width: 50%;
+  width: 70%;
+  text-align: left;
 }
 
 @include breakpoint-sm {
