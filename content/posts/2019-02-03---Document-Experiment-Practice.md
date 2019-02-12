@@ -3,7 +3,7 @@ template: post
 title: Document, Experiment, and Practice
 slug: /posts/document-experiment-practice/
 draft: false
-date: 2019-02-01T19:30:37.121Z
+date: 2019-01-31T19:30:37.121Z
 description: Welcome to my blog, I'm glad you're here. I primarily use it as a tool to document the things I learn and communicate the ideas that I have. It's a great excuse to experiment with web design/development and practice communicating through writing.
 
 category: Process
