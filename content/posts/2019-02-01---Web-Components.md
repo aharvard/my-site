@@ -7,7 +7,7 @@ date: 2019-02-12T19:30:37.121Z
 description: >-
   Web Components represent a collection of browser specifications that allow
   designers and developers to create and reuse custom HTML tags that can deliver
-  scoped styles and custom behaviors
+  scoped styles and custom behaviors.
 category: Code
 tags:
   - Design Systems
