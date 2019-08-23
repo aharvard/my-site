@@ -2,9 +2,13 @@
 template: post
 title: Getting Some Clairity (Conf 2019)
 slug: clarity-conf-2019
-draft: true
+draft: false
 date: 2019-08-23T17:58:48.855Z
-description: asdasdasd
+description: >-
+  I had the privilege to attend Clarity Conf, 2019 in San Fransisco and it was
+  amazing. Clarity is a conference about design systems and the people who make
+  them. It's organized by Jina Anne and has been steadily growing since its
+  start, 4 years ago.
 category: conference
 tags:
   - conference
