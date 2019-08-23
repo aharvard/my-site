@@ -59,6 +59,16 @@ The main part of her talk went into some details about **ways to co-create**:
 
 Rune Madsen & Martin Bravo
 
+\- Book: [_Programing Design Systems_](https://programmingdesignsystems.com/introduction/)__
+
+\- What are design systems a symptom of?
+
+\- Monoculture via Design Manuals
+
+\- Modern Design practice
+
+\- Code as a material
+
 ### Garbage Pail Components
 
 Marcy Sutton
