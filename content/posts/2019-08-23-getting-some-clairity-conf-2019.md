@@ -27,7 +27,7 @@ This what my first time hearing [Denise Jacobs](https://twitter.com/denisejacobs
 
 She had all of us in the audience interact with each other, usually something I dislike, but in this case it was great. She used audience participation to teach us about listening to each other.
 
-The main part of her talk went into some details about ways to co-create:
+The main part of her talk went into some details about **ways to co-create**:
 
 #### Unblock
 
