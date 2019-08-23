@@ -2,7 +2,7 @@
 template: post
 title: Getting Some Clairity (Conf 2019)
 slug: /posts/clarity-conf-2019
-draft: false
+draft: true
 date: 2019-08-23T17:58:48.855Z
 description: >-
   I had the privilege to attend Clarity Conf, 2019 in San Fransisco and it was
