@@ -1,11 +1,13 @@
 ---
-title: 'About me'
-template: 'page'
+template: page
+title: About me
+slug: about
+draft: false
 ---
 
-As a designer/developer hybrid, I'm looking for a new opportunities that allows me to balance my design experience with passion for engineering user interfaces—also open to roles that may focus solely on design or development.
+I work as an Interaction Design Lead on the UX team at Regions Bank. Currently, I’m focusing my efforts on enterprise-wide design initiatives and design team operations from my home office in Cookeville, TN.
 
-I bring senior-level UX/UI design direction while also executing accessible HTML and modern CSS, with a sharp eye for typography, spacing, and color. Currently, I'm honing my vanilla JavaScript skills and I really enjoy working in the JAM stack.
+I bring senior-level UX/UI design direction while also executing accessible HTML and modern CSS. I love learning new things, and right now I’m practicing design team management and improving my JavaScript skills.
 
 I studied industrial design at Georgia Tech and typography at Savannah College of Art and Design while gaining real-world work experience at CNN and Turner Broadcasting. In my free time, I enjoy creative activities like playing guitar, sewing, and photography.
 
