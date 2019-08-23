@@ -9,6 +9,60 @@ category: conference
 tags:
   - conference
 ---
-I had the privilege to attend Clarity Conf, 2019 and it was amazing. 
+I had the privilege to attend Clarity Conf, 2019 in San Fransisco and it was amazing. 
 
-It was a two-day conference, held in San Fransisco, and organized by Jina Anne. Clarity is in its fourth year and I look forward to attending and supporting it as long as its around.
+Clarity is a conference about design systems and the people who make them. It's organized by Jina Anne and has been steadily growing since its start, 4 years ago.
+
+Sadly, I was unable to attend any of the pre-conference workshops this year but would love to try next time!
+
+## Day One
+
+### Co-Create: Creating Better Together
+
+Denise Jacobs
+
+### Graphic Design Systems
+
+Rune Madsen & Martin Bravo
+
+### Garbage Pail Components
+
+Marcy Sutton
+
+### Putting Your Brand in Motion
+
+Val Head
+
+### Partnership & Trust to Fuel Growth
+
+Nicole Torgersen & Teresa Aguilera
+
+### The World-Wide Work
+
+Ethan Marcotte
+
+## Day Two
+
+### Full-Featured Art Direction for the Web
+
+Mina Markham
+
+### Where We Can Go
+
+Dan Eden
+
+### Designing Standard Systems
+
+Stephanie Rewis&Brandon Ferrua
+
+### More Than You Ever Wanted to Know About Resource Hints
+
+Harry Roberts
+
+### System of Systems
+
+Tatiana Mac
+
+### Designing for the Impossible
+
+Anil Dash
