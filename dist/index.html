@@ -8,6 +8,7 @@
             html {
                 --background-color: white;
                 --text-color: #333;
+                --site-width: 600px;
             }
 
             @media (prefers-color-scheme: dark) {
@@ -21,10 +22,11 @@
                 background: var(--background-color);
                 color: var(--text-color);
                 font-family: Tahoma, Geneva, Verdana, sans-serif;
+                padding: 15px;
             }
 
             main {
-                max-width: 600px;
+                max-width: var(--site-width);
                 margin: 6vw auto 0;
             }
 
@@ -37,8 +39,9 @@
                 letter-spacing: 0.5px;
             }
             footer {
+                margin: 0 auto;
+                max-width: var(--site-width);
                 margin-top: 50px;
-                text-align: center;
             }
             footer p {
                 font-size: 12px;
