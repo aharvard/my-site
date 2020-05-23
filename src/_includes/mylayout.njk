@@ -1,0 +1,34 @@
+---
+title: Andrew Harvard
+---
+
+{% set css %}
+{% include "./style.css" %}
+{% endset %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>{{title}}</title>
+    <style>
+      {{css | cssmin | safe}}
+    </style>
+    <title>{{ title }}</title>
+  </head>
+  <body>
+    <main>
+      {{ content | safe }}
+    </main>
+    <footer>
+      <p>&#169; <span id="footer-date">0000</span> Andrew Harvard. All rights reserved.</p>
+    </footer>
+    <script>
+      const footerDateSpan = document.getElementById("footer-date");
+      const year = new Date();
+      footerDateSpan.innerText = year.getFullYear();
+    </script>
+  </body>
+
+</html>

@@ -1,72 +1,32 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Andrew Harvard</title>
-        <style>
-            html {
-                --background-color: white;
-                --text-color: #333;
-                --site-width: 600px;
-            }
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Andrew Harvard</title>
+    <style>
+      html{--background-color:white;--text-color:#333;--site-width:600px}@media (prefers-color-scheme:dark){html{--background-color:#2d2d2d;--text-color:#e7dddd}}body{background:var(--background-color);color:var(--text-color);font-family:Tahoma,Geneva,Verdana,sans-serif;padding:15px}main{max-width:var(--site-width);margin:6vw auto 0}h1{letter-spacing:-.5px}p{font-size:14px;line-height:1.75;letter-spacing:.5px}footer{margin:0 auto;max-width:var(--site-width);margin-top:50px}footer p{font-size:12px}
+    </style>
+    <title>Andrew Harvard</title>
+  </head>
+  <body>
+    <main>
+      <h1>Hi, I'm Andrew.</h1>
+<p>I work as a Senior UX Engineer at Regions Bank. Currently, I’m focusing my efforts on enterprise-wide design initiatives from my home office in Cookeville, TN.</p>
+<p>I studied industrial design at Georgia Tech and typography at Savannah College of Art and Design while gaining real-world work experience at CNN and Turner Broadcasting. In my free time, I enjoy creative activities like playing guitar, sewing, and photography.</p>
 
-            @media (prefers-color-scheme: dark) {
-                html {
-                    --background-color: #2d2d2d;
-                    --text-color: #e7dddd;
-                }
-            }
+    </main>
+    <footer>
+      <p>&#169; <span id="footer-date">0000</span> Andrew Harvard. All rights reserved.</p>
+    </footer>
+    <script>
+      const footerDateSpan = document.getElementById("footer-date");
+      const year = new Date();
+      footerDateSpan.innerText = year.getFullYear();
+    </script>
+  </body>
 
-            body {
-                background: var(--background-color);
-                color: var(--text-color);
-                font-family: Tahoma, Geneva, Verdana, sans-serif;
-                padding: 15px;
-            }
-
-            main {
-                max-width: var(--site-width);
-                margin: 6vw auto 0;
-            }
-
-            h1 {
-                letter-spacing: -0.5px;
-            }
-            p {
-                font-size: 14px;
-                line-height: 1.75;
-                letter-spacing: 0.5px;
-            }
-            footer {
-                margin: 0 auto;
-                max-width: var(--site-width);
-                margin-top: 50px;
-            }
-            footer p {
-                font-size: 12px;
-            }
-        </style>
-    </head>
-    <body>
-        <main>
-            <h1>Hi, I'm Andrew.</h1>
-
-            <p>
-                I work as a Senior UX Engineer at Regions Bank. Currently, I’m focusing my efforts on enterprise-wide design initiatives from my home office in Cookeville, TN.
-            </p>
-
-            <p>
-                I studied industrial design at Georgia Tech and typography at Savannah College of Art and Design while gaining real-world work experience at CNN and Turner Broadcasting. In my free time, I enjoy creative activities like playing guitar, sewing, and photography.
-            </p>
-        </main>
-        <footer>
-            <p>&#169; <span id="footer-date">0000</span> Andrew Harvard. All rights reserved.</p>
-        </footer>
-        <script>
-            const footerDateSpan = document.getElementById("footer-date");
-            const year = new Date();
-            footerDateSpan.innerText = year.getFullYear();
-        </script>
-    </body>
 </html>

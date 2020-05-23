@@ -1,0 +1,41 @@
+html {
+    --background-color: white;
+    --text-color: #333;
+    --site-width: 600px;
+}
+
+@media (prefers-color-scheme: dark) {
+    html {
+        --background-color: #2d2d2d;
+        --text-color: #e7dddd;
+    }
+}
+
+body {
+    background: var(--background-color);
+    color: var(--text-color);
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+    padding: 15px;
+}
+
+main {
+    max-width: var(--site-width);
+    margin: 6vw auto 0;
+}
+
+h1 {
+    letter-spacing: -0.5px;
+}
+p {
+    font-size: 14px;
+    line-height: 1.75;
+    letter-spacing: 0.5px;
+}
+footer {
+    margin: 0 auto;
+    max-width: var(--site-width);
+    margin-top: 50px;
+}
+footer p {
+    font-size: 12px;
+}
