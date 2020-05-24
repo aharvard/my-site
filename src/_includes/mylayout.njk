@@ -6,6 +6,10 @@ title: Andrew Harvard
 {% include "./style.css" %}
 {% endset %}
 
+{% set js %}
+{% include "./script.js" %}
+{% endset %}
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -25,9 +29,7 @@ title: Andrew Harvard
       <p>&#169; <span id="footer-date">0000</span> Andrew Harvard. All rights reserved.</p>
     </footer>
     <script>
-      const footerDateSpan = document.getElementById("footer-date");
-      const year = new Date();
-      footerDateSpan.innerText = year.getFullYear();
+      {{ js | jsmin | safe }}
     </script>
   </body>
 
