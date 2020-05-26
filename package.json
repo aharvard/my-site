@@ -1,25 +1,29 @@
 {
-    "name": "andrewharvard.com",
-    "version": "1.0.0",
-    "description": "This repo is for the personal website of Andrew Harvard.",
-    "main": "index.js",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/aharvard/andrewharvard.com.git"
-    },
-    "author": "",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/aharvard/andrewharvard.com/issues"
-    },
-    "homepage": "https://github.com/aharvard/andrewharvard.com#readme",
-    "scripts": {
-        "start": "npx @11ty/eleventy --serve",
-        "build": "npx @11ty/eleventy"
-    },
-    "devDependencies": {
-        "@11ty/eleventy": "^0.11.0",
-        "clean-css": "^4.2.3",
-        "terser": "^4.7.0"
-    }
+  "name": "andrewharvard.com",
+  "version": "1.0.0",
+  "description": "This repo is for the personal website of Andrew Harvard.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aharvard/andrewharvard.com.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aharvard/andrewharvard.com/issues"
+  },
+  "homepage": "https://github.com/aharvard/andrewharvard.com#readme",
+  "scripts": {
+    "start": "npx @11ty/eleventy --serve",
+    "build": "npx @11ty/eleventy",
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.0",
+    "clean-css": "^4.2.3",
+    "eslint": "^7.1.0",
+    "eslint-config-prettier": "^6.11.0",
+    "prettier": "^2.0.5",
+    "terser": "^4.7.0"
+  }
 }
