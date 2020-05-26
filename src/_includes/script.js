@@ -1,50 +1,49 @@
-const footerDateSpan = document.getElementById("footer-date");
+const footerDateSpan = document.getElementById('footer-date');
 const year = new Date();
 footerDateSpan.innerText = year.getFullYear();
 
-
 function themeToggle() {
   // Create DOM
-  const body = document.querySelector("body");
-  const footer = document.querySelector("footer");
-  const themeButton = document.createElement("button");
-  footer.insertAdjacentElement("beforeend", themeButton);
+  const body = document.querySelector('body');
+  const footer = document.querySelector('footer');
+  const themeButton = document.createElement('button');
+  footer.insertAdjacentElement('beforeend', themeButton);
 
+  // Has the user set dark or light color scheme?
+  let isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  let isLight = window.matchMedia('(prefers-color-scheme: light)').matches;
 
-  
-  // Has the user set dark or light color scheme? 
-  let isDark  = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  let isLight  = window.matchMedia('(prefers-color-scheme: light)').matches;
-  
   // Update the text of the theme button
   function updateButtonText() {
-    themeButton.innerText = isDark ? "☀️  Go Light" : isLight ?  "🌘  Go Dark" : null;  
-  } 
+    themeButton.innerText = isDark
+      ? '⚪️ Go Light'
+      : isLight
+      ? '⚫️ Go Dark'
+      : null;
+  }
 
   // Manages adding and toggle body classes
-  function themeClass(){
+  function themeClass() {
     // set class if there is none set
     if (body.classList.length === 0) {
-      body.classList.add(isDark ? "dark" : isLight ?  "light" : null);
+      body.classList.add(isDark ? 'dark' : isLight ? 'light' : null);
     } else {
       // toggle classes if one is set
-      
-      if (isDark) {
 
-        body.classList.remove("light");
-        body.classList.add("dark");
-      }  
-        else {
-          body.classList.remove("dark");
-          body.classList.add("light");
-        }
+      if (isDark) {
+        body.classList.remove('light');
+        body.classList.add('dark');
+      } else {
+        body.classList.remove('dark');
+        body.classList.add('light');
+      }
     }
   }
-  
+
   // Set class based on current color
   themeClass();
 
-  // Update Button Text 
+  // Update Button Text
   updateButtonText();
 
   // Watch for OS color scheme change and update UI
@@ -59,14 +58,14 @@ function themeToggle() {
     window.requestAnimationFrame(themeClass);
     window.requestAnimationFrame(updateButtonText);
   });
-  
+
   // Watch for click on theme button and update UI
-  themeButton.addEventListener("click", function() {
+  themeButton.addEventListener('click', function () {
     isDark = !isDark;
     isLight = !isLight;
     window.requestAnimationFrame(themeClass);
     window.requestAnimationFrame(updateButtonText);
-  })
+  });
 }
 
 themeToggle();
