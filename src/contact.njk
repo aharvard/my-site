@@ -3,7 +3,10 @@ layout: mylayout.njk
 ---
 <h1>Get in Touch</h1>
 
-<form action="" name="contact" netlify>
+<form  name="contact" method="POST" netlify netlify-honeypot="bot-field">
+  <p style="visibility: hidden; height: 0; margin: 0;">
+    <label>Don’t fill this out if you're human: <input name="bot-field"/></label>
+  </p>
   <label for="message">Message</label>
   <textarea is="message" name="message"></textarea>
   <input type="submit" id="submit" value="Send!">
