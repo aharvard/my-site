@@ -1,5 +1,6 @@
 ---
 title: Andrew Harvard
+description: Senior UX Engineer/Interaction Designer hybrid. Enjoys writing modern CSS, accessible HTML, and vanilla JS.
 ---
 
 {% set css %}
@@ -15,6 +16,7 @@ title: Andrew Harvard
   <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name={{description}}/>
     <title>{{title}}</title>
     <style>
       {{css | cssmin | safe}}
@@ -25,8 +27,9 @@ title: Andrew Harvard
     <main>
       {{ content | safe }}
     </main>
+    {% include "paritals/my-recent-project.njk" %}
     <footer>
-      <p>&#169; <span id="footer-date">0000</span> Andrew Harvard. All rights reserved.</p>
+      <p>This website is built with 11ty and hosted on Netlify. &#169; <span id="footer-date">0000</span> Andrew Harvard.</p>
     </footer>
     <script>
       {{ js | jsmin | safe }}
