@@ -2,7 +2,7 @@
 layout: mylayout.njk
 ---
 
-# Hi, I'm Andrew.
+<h1>Hi, I'm Andrew. <em title="preferred pronouns" aria-label="and my preferred pronouns are he and him">he/him</em></h1>
 
 I work as a Senior UX Engineer at Regions Bank, and **Black lives matter**.
 

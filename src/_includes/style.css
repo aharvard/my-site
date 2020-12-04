@@ -53,11 +53,17 @@ body {
 }
 
 * {
-  transition: all 250ms ease;
+  /* transition: all 250ms ease; */
 }
 
 h1 {
   letter-spacing: -0.5px;
+}
+
+h1 em {
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.05ch;
 }
 
 p {
@@ -107,19 +113,29 @@ a.button {
 
 .recent-project {
   border: 2px solid currentColor;
-  padding: 24px 30px;
   border-radius: 10px;
   margin: 50px 0;
   position: relative;
   background: var(--background-color);
+  padding: 24px 30px;
+  display: block;
+  text-decoration: none;
+  transition: transform 250ms ease;
 }
 
-.recent-project::before {
+.recent-project:hover,
+.recent-project:focus,
+.recent-project:active {
+  background: var(--button-color);
+  outline: none;
+}
+
+.recent-project::after {
   content: '';
   height: 100%;
   width: 100%;
-  top: 15px;
-  left: 15px;
+  top: 0;
+  left: 0;
   right: 0;
   bottom: 0;
   background: currentColor;
@@ -127,12 +143,29 @@ a.button {
   position: absolute;
   z-index: -1;
   border-radius: inherit;
-  transition: all 500ms ease;
+  transition: inherit;
+  transform: translateX(15px) translateY(15px);
 }
 
-.recent-project:focus-within::before,
-.recent-project:hover::before {
-  transform: translate3d(-5px, -5px, 0);
+.recent-project:focus::after,
+.recent-project:hover::after {
+  transform: translateX(10px) translateY(10px);
+}
+.recent-project:active::after {
+  transform: translateX(5px) translateY(5px);
+}
+
+.recent-project > * {
+  transform-origin: center;
+  transition: inherit;
+}
+.recent-project:hover > *,
+.recent-project:focus > * {
+  transform: translateY(1px);
+}
+.recent-project:active > * {
+  transform: translateY(2px);
+  transition-duration: 50ms;
 }
 
 .recent-project__heading {
@@ -145,4 +178,9 @@ a.button {
   margin-bottom: 10px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+}
+
+.recent-project__cta {
+  font-weight: 600;
+  margin-bottom: 0;
 }
