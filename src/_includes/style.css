@@ -294,7 +294,7 @@ a.button {
   padding: inherit;
 }
 .hero__heading {
-  margin: 0;
+  margin: 8rem 0 0;
   font-weight: 900;
   font-size: clamp(2rem, 6vw, 5rem);
 }
@@ -315,6 +315,10 @@ a.button {
   mix-blend-mode: lighten;
 }
 
+.hero--home .hero__heading {
+  margin-top: 0;
+}
+
 .hero--home .hero__copy {
   background: linear-gradient(transparent, black);
 }
@@ -330,10 +334,11 @@ a.button {
 
 .footer__content {
   display: flex;
-  align-items: center;
-  flex: 1 1 auto;
+  align-items: flex-end;
+  flex-direction: column-reverse;
   padding-left: 2rem;
-  padding-bottom: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 3rem;
 }
 
 .footer__text {
@@ -342,7 +347,7 @@ a.button {
 }
 
 .theme-toggle-button {
-  margin-right: 1rem;
+  /* margin-right: 1rem; */
 }
 
 /* PROJECT MACRO */
@@ -466,14 +471,25 @@ a.button {
   }
 
   .footer {
+    align-items: flex-end;
     flex-direction: row;
   }
+
   .footer .nav {
     position: relative;
     bottom: 1rem;
     right: 1rem;
-    /* z-index: -1; */
   }
+
+  .footer__content {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-left: 2rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+  }
+
   .footer .nav-list[aria-label='social media'] {
     margin-bottom: -0.25rem;
   }
@@ -485,7 +501,7 @@ a.button {
   }
 }
 
-@media (min-height: 700px) {
+@media (min-width: 700px) and (min-height: 700px) {
   .footer .nav {
     position: fixed;
   }
