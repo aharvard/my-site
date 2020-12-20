@@ -208,11 +208,6 @@ a.button {
   padding: 0.5rem 1rem;
 }
 
-.footer__text {
-  font-size: 12px;
-  flex: 1 1 auto;
-}
-
 /* MODAL */
 .modal {
   background: white;
@@ -275,6 +270,7 @@ a.button {
 /* HERO */
 .hero {
   color: white;
+  z-index: 1;
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;
@@ -307,7 +303,7 @@ a.button {
   margin-bottom: 1rem;
   font-size: 4rem;
   font-weight: 900;
-  font-size: clamp(1rem, 4vw, 5rem);
+  font-size: clamp(1rem, 4vw, 3rem);
 }
 
 .hero--home .hero__img--headshot {
@@ -316,6 +312,7 @@ a.button {
   object-fit: contain;
   margin-top: -15%;
   pointer-events: none;
+  mix-blend-mode: lighten;
 }
 
 .hero--home .hero__copy {
@@ -328,8 +325,24 @@ a.button {
   display: flex;
   align-items: flex-end;
   text-align: right;
-  padding: 1rem 2rem;
   flex-direction: column-reverse;
+}
+
+.footer__content {
+  display: flex;
+  align-items: center;
+  flex: 1 1 auto;
+  padding-left: 2rem;
+  padding-bottom: 1rem;
+}
+
+.footer__text {
+  font-size: 12px;
+  flex: 1 1 auto;
+}
+
+.theme-toggle-button {
+  margin-right: 1rem;
 }
 
 /* PROJECT MACRO */
@@ -455,18 +468,25 @@ a.button {
   .footer {
     flex-direction: row;
   }
-  .footer__nav {
-    position: fixed;
+  .footer .nav {
+    position: relative;
     bottom: 1rem;
     right: 1rem;
+    /* z-index: -1; */
   }
-  .footer__nav-list[aria-label='social media'] {
+  .footer .nav-list[aria-label='social media'] {
     margin-bottom: -0.25rem;
   }
-  .footer__nav-link[href='/'] {
+  .footer .nav-link[href='/'] {
     display: none;
   }
   .footer__text {
     text-align: left;
+  }
+}
+
+@media (min-height: 700px) {
+  .footer .nav {
+    position: fixed;
   }
 }

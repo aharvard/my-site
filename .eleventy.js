@@ -2,6 +2,8 @@ const CleanCSS = require('clean-css');
 const Terser = require('terser');
 
 module.exports = function (eleventyConfig) {
+  eleventyConfig.addPassthroughCopy('src/assets');
+
   eleventyConfig.addFilter('cssmin', function (code) {
     return new CleanCSS({}).minify(code).styles;
   });

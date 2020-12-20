@@ -8,7 +8,7 @@ function themeToggle() {
   const footer = document.querySelector('.footer__content');
   const themeButton = document.createElement('button');
   themeButton.classList.add('theme-toggle-button');
-  footer.insertAdjacentElement('beforeend', themeButton);
+  footer.insertAdjacentElement('afterbegin', themeButton);
 
   // Has the user set dark or light color scheme?
   let isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
