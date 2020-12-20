@@ -1,6 +1,9 @@
 ---
 title: Andrew Harvard
 description: Senior UX Engineer/Interaction Designer hybrid. Enjoys writing modern CSS, accessible HTML, and vanilla JS.
+header: true
+footer: true
+showHeaderName: false
 ---
 
 {% set css %}
@@ -11,6 +14,9 @@ description: Senior UX Engineer/Interaction Designer hybrid. Enjoys writing mode
 {% include "./script.js" %}
 {% endset %}
 
+{% import "./partials/header.njk" as headerMacro %}
+{% import "./partials/footer.njk" as footerMacro %}
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -18,19 +24,24 @@ description: Senior UX Engineer/Interaction Designer hybrid. Enjoys writing mode
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name={{description}}/>
     <title>{{title}}</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;900&display=swap" rel="stylesheet">
     <style>
       {{css | cssmin | safe}}
     </style>
     <title>{{ title }}</title>
   </head>
-  <body>
-    <main>
+  <body class="body">
+    {% if header %}
+      {{headerMacro.header(showHeaderName)}}
+    {% endif %}
+    <main class="main">
       {{ content | safe }}
-      {% include "paritals/my-recent-project.njk" %}
     </main>
-    <footer>
-      <p>This website is built with 11ty and hosted on Netlify. &#169; <span id="footer-date">0000</span> Andrew Harvard.</p>
-    </footer>
+    {% if footer %}
+
+      {{footerMacro.footer()}}
+    {% endif %}
     <script>
       {{ js | jsmin | safe }}
     </script>

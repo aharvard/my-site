@@ -3,6 +3,9 @@
 
 
 
+
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -10,34 +13,192 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name=Senior UX Engineer/Interaction Designer hybrid. Enjoys writing modern CSS, accessible HTML, and vanilla JS./>
     <title>Andrew Harvard</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;900&display=swap" rel="stylesheet">
     <style>
-      html{--gray-100:#f5f5f5;--gray-200:#eeeeee;--gray-300:#e0e0e0;--gray-400:#bdbdbd;--gray-500:#9e9e9e;--gray-600:#757575;--gray-700:#616161;--gray-800:#424242;--gray-900:#212121;--black:#111;--site-width:700px}body.light{--background-color:var(--gray-100);--button-color:white;--button-hover-color:var(--gray-200);--button-text:var(--gray-800);--text-color:var(--gray-800);--interactive-text-color:var(--gray-800);--interactive-text-hover-color:var(--gray-900)}body.dark{--background-color:var(--gray-900);--button-color:var(--black);--button-hover-color:var(--gray-800);--button-text:var(--gray-400);--text-color:var(--gray-400);--interactive-text-color:var(--gray-400);--interactive-text-hover-color:var(--gray-100)}@media (prefers-color-scheme:dark){body{--background-color:var(--gray-900);--button-color:var(--gray-100);--button-hover-color:var(--gray-800);--text-color:var(--gray-400);--interactive-text-color:var(--gray-400);--interactive-text-hover-color:var(--gray-100)}}body{background:var(--background-color);color:var(--text-color);font-family:Tahoma,Geneva,Verdana,sans-serif;margin:0;max-width:var(--site-width);padding:30px;margin:1vw auto 0}*{transition:all 250ms ease}h1{letter-spacing:-.5px}p{letter-spacing:.5px;line-height:1.75}footer{margin-top:50px}footer p{font-size:12px}.button,button{background:var(--button-color);border-radius:5px;border:none;color:var(--button-text);cursor:pointer;font-size:14px;font-weight:600;padding:10px 15px}.button:focus,.button:hover,button:focus,button:hover{color:var(--button-text);background:var(--button-hover-color)}a{color:var(--interactive-text-color);text-decoration-thickness:2px}a:focus,a:hover{color:var(--interactive-text-hover-color)}a.button{text-decoration:none}.recent-project{border:2px solid currentColor;padding:24px 30px;border-radius:10px;margin:50px 0;position:relative;background:var(--background-color)}.recent-project::before{content:'';height:100%;width:100%;top:15px;left:15px;right:0;bottom:0;background:currentColor;display:block;position:absolute;z-index:-1;border-radius:inherit;transition:all .5s ease}.recent-project:focus-within::before,.recent-project:hover::before{transform:translate3d(-5px,-5px,0)}.recent-project__heading{margin-top:0}.recent-project__eyebrow{display:block;font-size:14px;margin-bottom:10px;text-transform:uppercase;letter-spacing:.05em}
+      html{--gray-100:#f5f5f5;--gray-200:#eeeeee;--gray-300:#e0e0e0;--gray-400:#bdbdbd;--gray-500:#9e9e9e;--gray-600:#757575;--gray-700:#616161;--gray-800:#424242;--gray-900:#212121;--black:#111;--site-width:700px;font-family:Inter,sans-serif}body.light{--background-color:var(--gray-100);--button-color:white;--button-hover-color:var(--gray-200);--button-text:var(--gray-800);--text-color:var(--gray-800);--interactive-text-color:var(--gray-800);--interactive-text-hover-color:var(--gray-900)}body.dark{--background-color:var(--gray-900);--button-color:var(--black);--button-hover-color:var(--gray-800);--button-text:var(--gray-400);--text-color:var(--gray-400);--interactive-text-color:var(--gray-400);--interactive-text-hover-color:var(--gray-100)}@media (prefers-color-scheme:dark){body{--background-color:var(--gray-900);--button-color:var(--gray-100);--button-hover-color:var(--gray-800);--text-color:var(--gray-400);--interactive-text-color:var(--gray-400);--interactive-text-hover-color:var(--gray-100)}}.body{background:var(--background-color);color:var(--text-color);margin:0}.body.menu-open{overflow:hidden}h1 em{font-size:1rem;font-weight:400}p{line-height:1.75}.button,button{background:var(--button-color);border-radius:5px;border:none;color:var(--button-text);cursor:pointer;font-size:14px;font-weight:600;padding:10px 15px}.button:focus,.button:hover,button:focus,button:hover{color:var(--button-text);background:var(--button-hover-color)}a{color:var(--interactive-text-color);text-decoration-thickness:2px;transition:all 250ms ease}a:hover{opacity:.5}a:focus,a:hover{color:var(--interactive-text-hover-color)}a.button{text-decoration:none}.text-style-nav-link{font-weight:800;font-size:1rem;color:var(--text-color);text-decoration:none}.header{background:#000;display:flex;justify-content:flex-end;align-items:center;padding:1rem 2rem}.header__home-link-container{flex:1 1 auto}.header__home-link{color:var(--gray-100)}.header__home-link:focus,.header__home-link:hover{color:var(--gray-100)}.header__menu-button{appearance:none;background:0 0;justify-self:flex-end;padding:1rem;margin-left:-1rem;z-index:2}.header__menu-button:focus,.header__menu-button:hover{background:0 0}.header__menu-button .icon-menu{transition:all .2s ease;transform:scale(1.5)}.header__menu-button:hover .icon-menu{transform:scale(01.4)}.menu-line{stroke:var(--gray-100);transform-origin:center;transition:all 250ms ease}.menu-open .menu-line{stroke:var(--text-color)}.menu-open #line-bottom,.menu-open #line-top{transform:scale(0)}.menu-open #line-middle-1{transform:rotate(45deg)}.menu-open #line-middle-2{transform:rotate(-45deg)}.nav{order:1;flex:0 0 auto;margin-left:8rem}.nav-list{list-style:none;padding:0;display:flex}.nav-list[aria-label='social media']{align-items:center;justify-content:flex-end}.nav-list[aria-label='site navigation']{flex-direction:column}.nav-link{display:block;padding:1rem;text-align:right}.nav-list[aria-label='site navigation'] .footer__nav-link{padding:.5rem 1rem}.footer__text{font-size:12px;flex:1 1 auto}.modal{background:#fff;position:absolute;top:0;bottom:0;left:0;right:0;z-index:1;color:var(--gray-100);display:none}.modal--open{display:block;background:var(--background-color)}.modal .nav{margin:0;min-height:100vh;display:flex;flex-direction:column;justify-content:space-around}.modal .nav-list{margin:0;gap:1rem}.modal .nav-list[aria-label='site navigation']{flex:0 1 50vh;justify-content:flex-end}.modal .nav-list[aria-label='social media']{flex:1 1 auto;justify-content:center}.modal .nav-link{text-align:center;font-size:1.25rem}.site-container{max-width:1200px;margin:0 auto;padding-left:2rem;padding-right:2rem}.page-body{margin:0;padding-top:4rem;padding-bottom:4rem}.hero{color:#fff;display:flex;align-items:flex-end;justify-content:flex-start;background-image:radial-gradient(ellipse at bottom,#26242c 0,#000 100%)}.hero .site-container{position:relative;width:100%}.hero__copy{position:absolute;bottom:0;left:0;right:0;padding:inherit}.hero__heading{margin:0;font-weight:900;font-size:clamp(2rem,6vw,5rem)}.hero__blurb{margin-bottom:1rem;font-size:4rem;font-weight:900;font-size:clamp(1rem,4vw,5rem)}.hero--home .hero__img--headshot{height:100%;width:100%;object-fit:contain;margin-top:-15%;pointer-events:none}.hero--home .hero__copy{background:linear-gradient(transparent,#000)}.footer{margin-top:50px;display:flex;align-items:flex-end;text-align:right;padding:1rem 2rem;flex-direction:column-reverse}.link-tile__link{border:2px solid currentColor;border-radius:10px;margin:50px 0;position:relative;background:var(--background-color);padding:24px 30px;display:block;text-decoration:none;transition:transform 250ms ease}.link-tile__link:active,.link-tile__link:focus,.link-tile__link:hover{background:var(--button-color);outline:0}.link-tile__link::after{content:'';height:100%;width:100%;top:0;left:0;right:0;bottom:0;background:currentColor;display:block;position:absolute;z-index:-1;border-radius:inherit;transition:inherit;transform:translateX(15px) translateY(15px)}.link-tile__link:focus::after,.link-tile__link:hover::after{transform:translateX(10px) translateY(10px)}.link-tile__link:active::after{transform:translateX(5px) translateY(5px)}.link-tile__link>*{transform-origin:center;transition:inherit}.link-tile__link:focus>*,.link-tile__link:hover>*{transform:translateY(1px)}.link-tile__link:active>*{transform:translateY(2px);transition-duration:50ms}.link-tile__heading{margin-top:0}.link-tile__eyebrow{display:block;font-size:14px;margin-bottom:10px;text-transform:uppercase;letter-spacing:.05em}.link-tile__cta{font-weight:600;margin-bottom:0}.pattern__block{outline:1px solid;padding:1rem}.pattern__title{font-family:monospace}@media (min-width:700px){.header{justify-content:flex-end}.header__menu-button{display:none}.hero--home .site-container{display:grid;grid-template-columns:1fr;grid-template-rows:500px;padding-right:0}.hero--home .site-container>*{grid-column:1/-1;grid-row:1/-1}.hero--home .hero__img--headshot{max-height:500px;margin-top:0;justify-self:flex-end;width:initial}.hero--home .hero__copy{align-self:center;position:relative;background:0 0;padding:0}.page-body{padding-right:25%}.footer{flex-direction:row}.footer__nav{position:fixed;bottom:1rem;right:1rem}.footer__nav-list[aria-label='social media']{margin-bottom:-.25rem}.footer__nav-link[href='/']{display:none}.footer__text{text-align:left}}
     </style>
     <title>Andrew Harvard</title>
   </head>
-  <body>
-    <main>
-      <h1>Hi, I'm Andrew.</h1>
-<p>I work as a Senior UX Engineer at Regions Bank, and <strong>Black lives matter</strong>.</p>
-<p>Currently, I'm developing UIs for the bank's public-facing websites, consulting on UI systems architecture, and refining front-end build tooling.</p>
+  <body class="body">
+    
+      
+  <header class="header">
+    
+    <button class="header__menu-button">
+      <svg class="icon-menu" width="22px" height="14px" viewBox="0 0 22 14" version="1.1" xmlns="http://www.w3.org/2000/svg"
+  overflow="visible" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidde="true">
+  <g id="menu-lines" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+    <line class="menu-line" id="line-top" x1="1" y1="1" x2="21" y2="1" id="Path"></line>
+    <line class="menu-line" id="line-middle-1" x1="1" y1="7" x2="21" y2="7" id="Path"></line>
+    <line class="menu-line" id="line-middle-2" x1="1" y1="7" x2="21" y2="7" id="Path"></line>
+    <line class="menu-line" id="line-bottom" x1="1" y1="13" x2="21" y2="13" id="Path"></line>
+  </g>
+</svg>
+    </button>
+    <div class="modal">
+      <nav class="nav">
+  <ul class="nav-list" aria-label="site navigation">
+    <li class="nav-list-item">
+      <a class="nav-link text-style-nav-link" href="/">Andrew Harvard</a>
+    </li>
+    <li class="nav-list-item">
+      <a class="nav-link text-style-nav-link" href="/posts">Posts</a>
+    </li>
+
+    <li class="nav-list-item">
+      <a class="nav-link text-style-nav-link" href="/patterns">Patterns</a>
+    </li>
+  </ul>
+  <ul class="nav-list" aria-label="social media">
+    <li class="nav-list-item">
+      <a class="nav-link text-style-nav-link" href="https://twitter.com/aharvard" aria-label="Twitter">
+        <svg width="24px" height="20px" viewBox="0 0 24 20" version="1.1" xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true">
+  <g id="Page-2" stroke="none" stroke-width="1" fill="var(--text-color)" fill-rule="evenodd">
+    <path
+      d="M23.32,4.44 C23.4651089,4.31938727 23.5299592,4.12735697 23.4876848,3.94346327 C23.4454104,3.75956956 23.3032122,3.61513662 23.12,3.57 L22.33,3.37 C22.1845422,3.33358414 22.0631066,3.23380957 21.9991663,3.09817873 C21.9352261,2.96254788 21.9355321,2.80538083 22,2.67 L22.44,1.78 C22.5248817,1.60388329 22.4993301,1.39444988 22.3745948,1.2439072 C22.2498594,1.09336453 22.0488245,1.0293315 21.86,1.08 L19.86,1.64 C19.7089165,1.68406602 19.5459029,1.65442719 19.42,1.56 C18.5545191,0.910889359 17.5018511,0.56 16.42,0.56 C13.6585763,0.56 11.42,2.79857625 11.42,5.56 L11.42,5.92 C11.4209185,6.04715642 11.3262413,6.15474415 11.2,6.17 C8.38999973,6.5 5.7,5.07 2.8,1.73 C2.67156124,1.58834766 2.47467749,1.53044067 2.29,1.58 C2.12377696,1.6564045 2.01255182,1.81748918 2,2 C1.59945751,3.64534174 1.76140012,5.3774236 2.46,6.92 C2.50213762,7.00340635 2.49424174,7.10334998 2.43952985,7.1791049 C2.38481797,7.25485981 2.29242495,7.29377773 2.2,7.28 L1.08,7.06 C0.918566443,7.03404524 0.754641623,7.08866173 0.641035197,7.20625434 C0.527428772,7.32384696 0.478495643,7.48955712 0.51,7.65 C0.684890124,9.20455947 1.55689544,10.5953528 2.88,11.43 C2.96624758,11.4717716 3.02102753,11.5591694 3.02102753,11.655 C3.02102753,11.7508306 2.96624758,11.8382284 2.88,11.88 L2.35,12.09 C2.21986231,12.1421726 2.11760915,12.2465882 2.06817112,12.3777891 C2.0187331,12.50899 2.02665306,12.6549202 2.09,12.78 C2.6849358,14.081805 3.88092523,15.0086969 5.29,15.26 C5.38887112,15.2958854 5.45470639,15.389818 5.45470639,15.495 C5.45470639,15.600182 5.38887112,15.6941146 5.29,15.73 C3.93036349,16.292336 2.47126447,16.5746326 1,16.56 C0.723857629,16.5047715 0.455228487,16.6838576 0.400000013,16.96 C0.344771539,17.2361424 0.523857632,17.5047715 0.8,17.56 C3.3475447,18.7682457 6.12118289,19.4258773 8.94,19.49 C11.4194534,19.5278164 13.8547822,18.8320081 15.94,17.49 C19.423778,15.1644785 21.5112286,11.2486314 21.5,7.06 L21.5,6.19 C21.5012352,6.04303474 21.5670673,5.9040559 21.68,5.81 L23.32,4.44 Z"
+      id="Path"></path>
+  </g>
+</svg>
+      </a>
+    </li>
+    <li class="nav-list-item">
+      <a class="nav-link text-style-nav-link" href="https://www.linkedin.com/in/aharvard" aria-label="LinkedIn">
+        <svg width="20px" height="22px" viewBox="0 0 20 22" version="1.1" xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true">
+  <g id="Page-2" stroke="none" stroke-width="1" fill="var(--text-color)" fill-rule="evenodd">
+    fill-rule="nonzero">
+    <rect id="Rectangle" x="0" y="7.5" width="5" height="14" rx="0.5"></rect>
+    <ellipse id="Oval" cx="2.48" cy="3" rx="2.48" ry="2.5"></ellipse>
+    <path
+      d="M16.5,21.5 L19.5,21.5 C19.7761424,21.5 20,21.2761424 20,21 L20,12.6 C20,8.83 17.87,7 14.89,7 C13.7013739,6.95652783 12.5498222,7.41787501 11.72,8.27 C11.6077491,8.39968703 11.4266348,8.44579534 11.266036,8.38557076 C11.1054371,8.32534619 10.9992989,8.17151823 11,8 C11,7.72385763 10.7761424,7.5 10.5,7.5 L7.5,7.5 C7.22385763,7.5 7,7.72385763 7,8 L7,21 C7,21.2761424 7.22385763,21.5 7.5,21.5 L10.5,21.5 C10.7761424,21.5 11,21.2761424 11,21 L11,13.5 C11,12.1192881 12.1192881,11 13.5,11 C14.8807119,11 16,12.1192881 16,13.5 L16,21 C16,21.2761424 16.2238576,21.5 16.5,21.5 Z"
+      id="Path"></path>
+  </g>
+</svg>
+      </a>
+    </li>
+    <li class="nav-list-item">
+      <a class="nav-link text-style-nav-link" href="https://github.com/aharvard" aria-label="GitHub">
+        <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true">
+  <g id="Page-2" stroke="none" stroke-width="1" fill="var(--text-color)" fill-rule="evenodd">
+    <path
+      d="M12,0.279999463 C6.09825247,0.27824661 1.07133693,4.56813441 0.145132155,10.396751 C-0.781072622,16.2253677 2.66842121,21.8622116 8.28,23.69 L8.57,23.69 C8.85620431,23.7077555 9.13625951,23.6017917 9.33902559,23.3990256 C9.54179167,23.1962595 9.6477555,22.9162043 9.63,22.63 L9.63,22.42 C9.63,22.25 9.63,22.02 9.63,21.33 C9.61017523,21.1976699 9.53813728,21.0788073 9.43,21 C9.31234651,20.9048261 9.15791925,20.8680577 9.01,20.9 C6.33,21.48 5.76,19.8 5.72,19.69 C5.38440987,18.8011171 4.78403177,18.0366822 4,17.5 C3.95302518,17.4593771 3.90286395,17.4225922 3.85,17.39 C3.96620778,17.32744 4.09912808,17.3029547 4.23,17.32 C4.74124644,17.3910884 5.1777504,17.7251089 5.38,18.2 C6.18402061,19.5999541 7.95174073,20.112593 9.38,19.36 C9.52966698,19.2945732 9.63793982,19.1601656 9.67,19 C9.70828836,18.537441 9.90626493,18.1025996 10.23,17.77 C10.3767925,17.6396404 10.433714,17.4354391 10.3755248,17.2479406 C10.3173356,17.0604421 10.1548048,16.9243466 9.96,16.9 C7.59,16.63 5.17,15.8 5.17,11.71 C5.15002242,10.6828805 5.52599451,9.68744964 6.22,8.93 C6.35050071,8.78586093 6.38560459,8.57913809 6.31,8.4 C6.03207963,7.62353034 6.03561881,6.77412674 6.32,6 C7.24382752,6.16376095 8.11093135,6.55946309 8.84,7.15 C8.96201661,7.23612022 9.116648,7.26189212 9.26,7.22 C10.1532851,6.97768205 11.0744378,6.85329282 12,6.85 C12.9290224,6.8507808 13.8538084,6.97520656 14.75,7.22 C14.8902808,7.25870625 15.0405082,7.23305766 15.16,7.15 C15.8902169,6.56131979 16.7568225,6.16584501 17.68,6 C17.952229,6.76997978 17.952229,7.61002022 17.68,8.38 C17.6043954,8.55913809 17.6394993,8.76586093 17.77,8.91 C18.4568298,9.65987691 18.8322771,10.6431914 18.82,11.66 C18.82,15.75 16.39,16.57 14.01,16.84 C13.8104427,16.8607819 13.6426344,16.9988381 13.5837832,17.1906494 C13.524932,17.3824606 13.586437,17.5908744 13.74,17.72 C14.1882992,18.1827041 14.4112496,18.818661 14.35,19.46 L14.35,22.64 C14.3399777,22.9565551 14.4720296,23.2610081 14.71,23.47 C15.0134819,23.6972215 15.406491,23.7676666 15.77,23.66 C21.3424055,21.7957817 24.7452444,16.1706673 23.8098335,10.3696312 C22.8744227,4.56859513 17.875941,0.298184653 12,0.279999463 Z"
+      id="Path"></path>
+  </g>
+</svg>
+      </a>
+    </li>
+  </ul>
+</nav>
+    </div>
+  </header>
+
+    
+    <main class="main">
+      
+
+
+
+
+
+  <div class="hero hero--home">
+    <div class="site-container">
+      
+      
+<img class="hero__img--headshot"src="/gta-headshot-site-hero.png" alt="Andrew smiling wearing an orange button-down shirt">
+<div class="hero__copy">
+  <h1 class="hero__heading">Hi, I'm Andrew.</h1>
+  <div class="hero__blurb" title="preferred pronouns" aria-label="and my preferred pronouns are he and him">he/him</div>
+</div>
+
+    </div>
+  </div>
+
+
+<div class="site-container">
+  <div class="page-body">
+    <a href="https://support.eji.org/give/153413/#!/donation/checkout">
+  Black Lives Matter. Support&nbsp;the&nbsp;Equal&nbsp;Justice&nbsp;Initiative.
+</a>
+<p>I work as a Senior UX Engineer at Regions Bank. Currently, I'm developing UIs for the bank's public-facing websites, consulting on UI systems architecture, and refining front-end build tooling.</p>
 <p>I enjoy writing modern CSS and designing accessible HTML patterns. I believe that design is a team sport, and I love working with designers, content strategists, researchers, and architects.</p>
-<p>In 2011, I got my start in UX as a designer and enjoyed being a generalist. Over the past few years, I began to specialize in interaction design and UI development.</p>
+<p>In 2011, I got my start in UX as a designer and enjoyed being a generalist. Since 2015, I've specialized in interaction design and UI development.</p>
 <p>I studied industrial design at Georgia Tech and typography at Savannah College of Art and Design. During that time, I gained work experience at CNN and Turner Broadcasting.</p>
 <p>I work from my home office in Cookeville, TN and I'm a proud cat dad to Davy, Johnny, and Walter.</p>
 <p>Let's connect on <a href="https://twitter.com/aharvard">Twitter</a> or <a href="https://www.linkedin.com/in/aharvard/">LinkedIn</a>!</p>
 
+  </div>
+</div>
     </main>
-    <article class="recent-project">
-  <h2 class="recent-project__heading">
-    <span class="recent-project__eyebrow">My Latest Project</span> Critique Cards</h2>
-  <p>Design critiques can be challenging. Next time you're not sure how to ask for feedback or need help guiding a design review, draw a card and start a discussion!</p>
-  <a href="https://critique-cards.netlify.app/" aria-label="Check out Critique Cards">Check it out!</a>
-</article>
-    <footer>
-      <p>This website is built with 11ty and hosted on Netlify. &#169; <span id="footer-date">0000</span> Andrew Harvard.</p>
-    </footer>
+    
+
+      
+  <footer class="footer">
+    <nav class="nav">
+  <ul class="nav-list" aria-label="site navigation">
+    <li class="nav-list-item">
+      <a class="nav-link text-style-nav-link" href="/">Andrew Harvard</a>
+    </li>
+    <li class="nav-list-item">
+      <a class="nav-link text-style-nav-link" href="/posts">Posts</a>
+    </li>
+
+    <li class="nav-list-item">
+      <a class="nav-link text-style-nav-link" href="/patterns">Patterns</a>
+    </li>
+  </ul>
+  <ul class="nav-list" aria-label="social media">
+    <li class="nav-list-item">
+      <a class="nav-link text-style-nav-link" href="https://twitter.com/aharvard" aria-label="Twitter">
+        <svg width="24px" height="20px" viewBox="0 0 24 20" version="1.1" xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true">
+  <g id="Page-2" stroke="none" stroke-width="1" fill="var(--text-color)" fill-rule="evenodd">
+    <path
+      d="M23.32,4.44 C23.4651089,4.31938727 23.5299592,4.12735697 23.4876848,3.94346327 C23.4454104,3.75956956 23.3032122,3.61513662 23.12,3.57 L22.33,3.37 C22.1845422,3.33358414 22.0631066,3.23380957 21.9991663,3.09817873 C21.9352261,2.96254788 21.9355321,2.80538083 22,2.67 L22.44,1.78 C22.5248817,1.60388329 22.4993301,1.39444988 22.3745948,1.2439072 C22.2498594,1.09336453 22.0488245,1.0293315 21.86,1.08 L19.86,1.64 C19.7089165,1.68406602 19.5459029,1.65442719 19.42,1.56 C18.5545191,0.910889359 17.5018511,0.56 16.42,0.56 C13.6585763,0.56 11.42,2.79857625 11.42,5.56 L11.42,5.92 C11.4209185,6.04715642 11.3262413,6.15474415 11.2,6.17 C8.38999973,6.5 5.7,5.07 2.8,1.73 C2.67156124,1.58834766 2.47467749,1.53044067 2.29,1.58 C2.12377696,1.6564045 2.01255182,1.81748918 2,2 C1.59945751,3.64534174 1.76140012,5.3774236 2.46,6.92 C2.50213762,7.00340635 2.49424174,7.10334998 2.43952985,7.1791049 C2.38481797,7.25485981 2.29242495,7.29377773 2.2,7.28 L1.08,7.06 C0.918566443,7.03404524 0.754641623,7.08866173 0.641035197,7.20625434 C0.527428772,7.32384696 0.478495643,7.48955712 0.51,7.65 C0.684890124,9.20455947 1.55689544,10.5953528 2.88,11.43 C2.96624758,11.4717716 3.02102753,11.5591694 3.02102753,11.655 C3.02102753,11.7508306 2.96624758,11.8382284 2.88,11.88 L2.35,12.09 C2.21986231,12.1421726 2.11760915,12.2465882 2.06817112,12.3777891 C2.0187331,12.50899 2.02665306,12.6549202 2.09,12.78 C2.6849358,14.081805 3.88092523,15.0086969 5.29,15.26 C5.38887112,15.2958854 5.45470639,15.389818 5.45470639,15.495 C5.45470639,15.600182 5.38887112,15.6941146 5.29,15.73 C3.93036349,16.292336 2.47126447,16.5746326 1,16.56 C0.723857629,16.5047715 0.455228487,16.6838576 0.400000013,16.96 C0.344771539,17.2361424 0.523857632,17.5047715 0.8,17.56 C3.3475447,18.7682457 6.12118289,19.4258773 8.94,19.49 C11.4194534,19.5278164 13.8547822,18.8320081 15.94,17.49 C19.423778,15.1644785 21.5112286,11.2486314 21.5,7.06 L21.5,6.19 C21.5012352,6.04303474 21.5670673,5.9040559 21.68,5.81 L23.32,4.44 Z"
+      id="Path"></path>
+  </g>
+</svg>
+      </a>
+    </li>
+    <li class="nav-list-item">
+      <a class="nav-link text-style-nav-link" href="https://www.linkedin.com/in/aharvard" aria-label="LinkedIn">
+        <svg width="20px" height="22px" viewBox="0 0 20 22" version="1.1" xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true">
+  <g id="Page-2" stroke="none" stroke-width="1" fill="var(--text-color)" fill-rule="evenodd">
+    fill-rule="nonzero">
+    <rect id="Rectangle" x="0" y="7.5" width="5" height="14" rx="0.5"></rect>
+    <ellipse id="Oval" cx="2.48" cy="3" rx="2.48" ry="2.5"></ellipse>
+    <path
+      d="M16.5,21.5 L19.5,21.5 C19.7761424,21.5 20,21.2761424 20,21 L20,12.6 C20,8.83 17.87,7 14.89,7 C13.7013739,6.95652783 12.5498222,7.41787501 11.72,8.27 C11.6077491,8.39968703 11.4266348,8.44579534 11.266036,8.38557076 C11.1054371,8.32534619 10.9992989,8.17151823 11,8 C11,7.72385763 10.7761424,7.5 10.5,7.5 L7.5,7.5 C7.22385763,7.5 7,7.72385763 7,8 L7,21 C7,21.2761424 7.22385763,21.5 7.5,21.5 L10.5,21.5 C10.7761424,21.5 11,21.2761424 11,21 L11,13.5 C11,12.1192881 12.1192881,11 13.5,11 C14.8807119,11 16,12.1192881 16,13.5 L16,21 C16,21.2761424 16.2238576,21.5 16.5,21.5 Z"
+      id="Path"></path>
+  </g>
+</svg>
+      </a>
+    </li>
+    <li class="nav-list-item">
+      <a class="nav-link text-style-nav-link" href="https://github.com/aharvard" aria-label="GitHub">
+        <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true">
+  <g id="Page-2" stroke="none" stroke-width="1" fill="var(--text-color)" fill-rule="evenodd">
+    <path
+      d="M12,0.279999463 C6.09825247,0.27824661 1.07133693,4.56813441 0.145132155,10.396751 C-0.781072622,16.2253677 2.66842121,21.8622116 8.28,23.69 L8.57,23.69 C8.85620431,23.7077555 9.13625951,23.6017917 9.33902559,23.3990256 C9.54179167,23.1962595 9.6477555,22.9162043 9.63,22.63 L9.63,22.42 C9.63,22.25 9.63,22.02 9.63,21.33 C9.61017523,21.1976699 9.53813728,21.0788073 9.43,21 C9.31234651,20.9048261 9.15791925,20.8680577 9.01,20.9 C6.33,21.48 5.76,19.8 5.72,19.69 C5.38440987,18.8011171 4.78403177,18.0366822 4,17.5 C3.95302518,17.4593771 3.90286395,17.4225922 3.85,17.39 C3.96620778,17.32744 4.09912808,17.3029547 4.23,17.32 C4.74124644,17.3910884 5.1777504,17.7251089 5.38,18.2 C6.18402061,19.5999541 7.95174073,20.112593 9.38,19.36 C9.52966698,19.2945732 9.63793982,19.1601656 9.67,19 C9.70828836,18.537441 9.90626493,18.1025996 10.23,17.77 C10.3767925,17.6396404 10.433714,17.4354391 10.3755248,17.2479406 C10.3173356,17.0604421 10.1548048,16.9243466 9.96,16.9 C7.59,16.63 5.17,15.8 5.17,11.71 C5.15002242,10.6828805 5.52599451,9.68744964 6.22,8.93 C6.35050071,8.78586093 6.38560459,8.57913809 6.31,8.4 C6.03207963,7.62353034 6.03561881,6.77412674 6.32,6 C7.24382752,6.16376095 8.11093135,6.55946309 8.84,7.15 C8.96201661,7.23612022 9.116648,7.26189212 9.26,7.22 C10.1532851,6.97768205 11.0744378,6.85329282 12,6.85 C12.9290224,6.8507808 13.8538084,6.97520656 14.75,7.22 C14.8902808,7.25870625 15.0405082,7.23305766 15.16,7.15 C15.8902169,6.56131979 16.7568225,6.16584501 17.68,6 C17.952229,6.76997978 17.952229,7.61002022 17.68,8.38 C17.6043954,8.55913809 17.6394993,8.76586093 17.77,8.91 C18.4568298,9.65987691 18.8322771,10.6431914 18.82,11.66 C18.82,15.75 16.39,16.57 14.01,16.84 C13.8104427,16.8607819 13.6426344,16.9988381 13.5837832,17.1906494 C13.524932,17.3824606 13.586437,17.5908744 13.74,17.72 C14.1882992,18.1827041 14.4112496,18.818661 14.35,19.46 L14.35,22.64 C14.3399777,22.9565551 14.4720296,23.2610081 14.71,23.47 C15.0134819,23.6972215 15.406491,23.7676666 15.77,23.66 C21.3424055,21.7957817 24.7452444,16.1706673 23.8098335,10.3696312 C22.8744227,4.56859513 17.875941,0.298184653 12,0.279999463 Z"
+      id="Path"></path>
+  </g>
+</svg>
+      </a>
+    </li>
+  </ul>
+</nav>
+    <div class="footer__content">
+      <p class="footer__text">This website is built with 11ty and hosted on Netlify. <br> &#169; <span id="footer-date">0000</span> Andrew Harvard.</p>
+    </div>
+  </footer>
+
+    
     <script>
-      const footerDateSpan=document.getElementById("footer-date"),year=new Date;function themeToggle(){const e=document.querySelector("body"),t=document.querySelector("footer"),n=document.createElement("button");t.insertAdjacentElement("afterbegin",n);let a=window.matchMedia("(prefers-color-scheme: dark)").matches,o=window.matchMedia("(prefers-color-scheme: light)").matches;function r(){n.innerText=a?"⚪️ Go Light":o?"⚫️ Go Dark":null}function i(){0===e.classList.length?e.classList.add(a?"dark":o?"light":null):a?(e.classList.remove("light"),e.classList.add("dark")):(e.classList.remove("dark"),e.classList.add("light"))}i(),r(),window.matchMedia("(prefers-color-scheme: dark)").addListener((function(e){e.matches?(a=!0,o=!1):(a=!1,o=!0),window.requestAnimationFrame(i),window.requestAnimationFrame(r)})),n.addEventListener("click",(function(){a=!a,o=!o,window.requestAnimationFrame(i),window.requestAnimationFrame(r)}))}footerDateSpan.innerText=year.getFullYear(),themeToggle();
+      const footerDateSpan=document.getElementById("footer-date"),year=new Date;function themeToggle(){const e=document.querySelector("body"),t=document.querySelector(".footer__content"),n=document.createElement("button");n.classList.add("theme-toggle-button"),t.insertAdjacentElement("beforeend",n);let o=window.matchMedia("(prefers-color-scheme: dark)").matches,a=window.matchMedia("(prefers-color-scheme: light)").matches;function d(){n.innerText=o?"⚪️ Go Light":a?"⚫️ Go Dark":null}function r(){0===e.classList.length?e.classList.add(o?"dark":a?"light":null):o?(e.classList.remove("light"),e.classList.add("dark")):(e.classList.remove("dark"),e.classList.add("light"))}r(),d(),window.matchMedia("(prefers-color-scheme: dark)").addListener((function(e){e.matches?(o=!0,a=!1):(o=!1,a=!0),window.requestAnimationFrame(r),window.requestAnimationFrame(d)})),n.addEventListener("click",(function(){o=!o,a=!a,window.requestAnimationFrame(r),window.requestAnimationFrame(d)}))}footerDateSpan.innerText=year.getFullYear(),themeToggle();const body=document.querySelector(".body"),menuButton=document.querySelector(".header__menu-button"),modal=document.querySelector(".modal");function handleMenu(){body.classList.toggle("menu-open"),modal.classList.toggle("modal--open")}menuButton.addEventListener("click",handleMenu);
     </script>
   </body>
 

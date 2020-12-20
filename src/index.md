@@ -1,10 +1,10 @@
 ---
-layout: mylayout.njk
+layout: homelayout.njk
 ---
 
-<h1>Hi, I'm Andrew. <em title="preferred pronouns" aria-label="and my preferred pronouns are he and him">he/him</em></h1>
-
-Black lives matter.
+<a href="https://support.eji.org/give/153413/#!/donation/checkout">
+  Black Lives Matter. Support&nbsp;the&nbsp;Equal&nbsp;Justice&nbsp;Initiative.
+</a>
 
 I work as a Senior UX Engineer at Regions Bank. Currently, I'm developing UIs for the bank's public-facing websites, consulting on UI systems architecture, and refining front-end build tooling.
 

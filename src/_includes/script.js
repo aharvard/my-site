@@ -5,9 +5,10 @@ footerDateSpan.innerText = year.getFullYear();
 function themeToggle() {
   // Create DOM
   const body = document.querySelector('body');
-  const footer = document.querySelector('footer');
+  const footer = document.querySelector('.footer__content');
   const themeButton = document.createElement('button');
-  footer.insertAdjacentElement('afterbegin', themeButton);
+  themeButton.classList.add('theme-toggle-button');
+  footer.insertAdjacentElement('beforeend', themeButton);
 
   // Has the user set dark or light color scheme?
   let isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -69,3 +70,13 @@ function themeToggle() {
 }
 
 themeToggle();
+
+const body = document.querySelector('.body');
+const menuButton = document.querySelector('.header__menu-button');
+const modal = document.querySelector('.modal');
+
+function handleMenu() {
+  body.classList.toggle('menu-open');
+  modal.classList.toggle('modal--open');
+}
+menuButton.addEventListener('click', handleMenu);

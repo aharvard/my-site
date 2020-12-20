@@ -1,6 +1,13 @@
 ---
-layout: mylayout.njk
+layout: baselayout.njk
+showHeaderName: true
 ---
 
-<h1>{{title}}</h1>
-{{ content | safe }}
+{% import "../_includes/partials/hero.njk" as heroMacro %}
+{{heroMacro.hero(heading = title, content="<p>passed in conetnt</p>")}}
+
+<div class="site-container">
+  <div class="page-body">
+    {{ content | safe }}
+  </div>
+</div>

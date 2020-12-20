@@ -1,0 +1,9 @@
+<svg class="icon-menu" width="22px" height="14px" viewBox="0 0 22 14" version="1.1" xmlns="http://www.w3.org/2000/svg"
+  overflow="visible" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidde="true">
+  <g id="menu-lines" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+    <line class="menu-line" id="line-top" x1="1" y1="1" x2="21" y2="1" id="Path"></line>
+    <line class="menu-line" id="line-middle-1" x1="1" y1="7" x2="21" y2="7" id="Path"></line>
+    <line class="menu-line" id="line-middle-2" x1="1" y1="7" x2="21" y2="7" id="Path"></line>
+    <line class="menu-line" id="line-bottom" x1="1" y1="13" x2="21" y2="13" id="Path"></line>
+  </g>
+</svg>
