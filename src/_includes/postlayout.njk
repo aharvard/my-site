@@ -1,13 +1,14 @@
 ---
 layout: baselayout.njk
 showHeaderName: true
+minHeight: auto
 ---
 
 {% import "../_includes/partials/hero.njk" as heroMacro %}
 {{heroMacro.hero(heading = title, content=page.data.createdDate)}}
 
 <div class="site-container">
-  <div class="page-body">
+  <div class="page-body" style="--page-body-min-height:{{minHeight}}">
     {{ content | safe }}
   </div>
 </div>

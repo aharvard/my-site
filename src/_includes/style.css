@@ -262,6 +262,7 @@ a.button {
 /* MAIN */
 
 .page-body {
+  min-height: var(--page-body-min-height);
   margin: 0;
   padding-top: 4rem;
   padding-bottom: 4rem;
