@@ -1,12 +1,15 @@
-{% macro hero(heading = "Heading", content, class = false) %}
+{% macro hero(heading = "Heading", blurb = false, class = false, headshot = false) %}
   <div class="hero{{" " + class if class }}">
+    {% if headshot %}
+      {{headshot | safe}}
+    {% endif %}
     <div class="site-container">
-      {% if heading %}
-        <div class="hero__copy">
-          <h1 class="hero__heading">{{heading}}</h1>
-        {% endif %}
-        {{content | safe}}
-      </div>
+      <h1 class="hero__heading">{{heading}}</h1>
+      {% if blurb %}
+        <div class="hero__blurb">
+          {{blurb | safe}}
+        </div>
+      {% endif %}
     </div>
   </div>
 {% endmacro %}

@@ -5,7 +5,7 @@ minHeight: auto
 ---
 
 {% import "../_includes/partials/hero.njk" as heroMacro %}
-{{heroMacro.hero(heading = title, content=page.data.createdDate)}}
+{{heroMacro.hero(heading = title, blurb="<span>date</span>")}}
 
 <div class="site-container">
   <div class="page-body" style="--page-body-min-height:{{minHeight}}">
