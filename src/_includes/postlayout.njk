@@ -1,14 +1,21 @@
 ---
 layout: baselayout.njk
 showHeaderName: true
+heroBlurb: "Im the default Hero Blurb"
 minHeight: auto
 ---
 
 {% import "../_includes/partials/hero.njk" as heroMacro %}
-{{heroMacro.hero(heading = title, blurb="<span>date</span>")}}
+{{heroMacro.hero(heading = title, blurb=page.date | readableDate)}}
 
 <div class="site-container">
   <div class="page-body" style="--page-body-min-height:{{minHeight}}">
+    <div>
+      Tags:
+      {% for tag in tags %}
+        {{tag}}{{"," if tag !== tags[tags.length - 1]}}
+      {% endfor %}
+    </div>
     {{ content | safe }}
   </div>
 </div>

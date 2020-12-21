@@ -1,6 +1,7 @@
 ---
 title: Web Components in 2019
 description: Web Components represent a collection of browser specifications that allow designers and developers to create and reuse custom HTML tags that can deliver scoped styles and custom behaviors.
+date: 2019-01-01
 tags:
   - post
   - design systems
