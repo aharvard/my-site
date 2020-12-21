@@ -44,7 +44,9 @@ body.dark {
 }
 
 /* GLOBAL  */
-
+* {
+  box-sizing: border-box;
+}
 .body {
   background: var(--background-color);
   color: var(--text-color);
@@ -52,9 +54,6 @@ body.dark {
 }
 .body.menu-open {
   overflow: hidden;
-}
-
-h1 {
 }
 
 h1 em {
@@ -196,6 +195,7 @@ a.button {
 }
 .nav-list[aria-label='site navigation'] {
   flex-direction: column;
+  align-items: flex-end;
 }
 
 .nav-link {
@@ -204,8 +204,9 @@ a.button {
   text-align: right;
 }
 
-.nav-list[aria-label='site navigation'] .footer__nav-link {
+.nav-list[aria-label='site navigation'] .nav-link {
   padding: 0.5rem 1rem;
+  /* outline: 1px solid red; */
 }
 
 /* MODAL */
@@ -238,6 +239,7 @@ a.button {
 .modal .nav-list[aria-label='site navigation'] {
   flex: 0 1 50vh;
   justify-content: flex-end;
+  align-items: center;
 }
 
 .modal .nav-list[aria-label='social media'] {
@@ -252,24 +254,25 @@ a.button {
 /* Site Container */
 .site-container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding-left: 2rem;
   padding-right: 2rem;
 }
 
 /* MAIN */
-
 .page-body {
   min-height: var(--page-body-min-height);
   margin: 0;
   padding-top: 4rem;
   padding-bottom: 4rem;
+  font-size: 1.25rem;
 }
 
 /* HERO */
 .hero {
   color: var(--gray-100);
+  z-index: 1;
   background-image: radial-gradient(
     ellipse at bottom,
     #26242c -50%,
@@ -285,56 +288,57 @@ a.button {
   padding-bottom: 3rem;
   padding-top: 3rem;
   align-items: stretch;
-  /* margin: 0; */
-}
-
-.hero .site-container > * {
-  /* flex: 1 1 auto; */
-  width: 100%;
 }
 
 .hero--home {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
+  grid-template-areas: 'hero';
   align-items: flex-end;
 }
 
 .hero--home > * {
-  grid-row: 1 / -1;
-  grid-column: 1 / -1;
+  grid-area: hero;
 }
 
 .hero--home .site-container {
-  z-index: 1;
   background: linear-gradient(transparent 50%, black 105%);
 }
 
 .hero__img--headshot {
   width: 100%;
-  height: 100%;
-  object-fit: contain;
-  margin-top: -25%;
+  object-fit: cover;
+  min-height: 400px;
+  margin-top: -10%;
+}
+
+.hero__heading {
+  font-size: clamp(2rem, 5vw, 5rem);
+  margin: 0;
+}
+.hero__blurb {
+  font-size: clamp(1rem, 3vw, 4rem);
 }
 
 /* FOOTER */
 .footer {
-  margin-top: 50px;
-  display: flex;
-  align-items: flex-end;
+  margin-top: 5rem;
   text-align: right;
-  flex-direction: column-reverse;
-  padding-right: 1rem;
-  padding-bottom: 1rem;
+}
+
+.footer .site-container {
+  padding-bottom: 5rem;
+}
+
+.footer .nav {
+  margin-right: -1rem;
 }
 
 .footer__content {
   display: flex;
   align-items: flex-end;
   flex-direction: column-reverse;
-  padding-left: 2rem;
-  padding-right: 1rem;
-  padding-bottom: 3rem;
 }
 
 .footer__text {
@@ -342,12 +346,7 @@ a.button {
   flex: 1 1 auto;
 }
 
-.theme-toggle-button {
-  /* margin-right: 1rem; */
-}
-
 /* PROJECT MACRO */
-
 .link-tile__link {
   border: 2px solid currentColor;
   border-radius: 10px;
@@ -426,9 +425,12 @@ a.button {
 .pattern__block {
   outline: 1px solid;
   padding: 1rem;
+  position: relative;
 }
+
 .pattern__title {
   font-family: monospace;
+  font-size: 1.5rem;
 }
 
 /* SMALL BREAKPOINT AND UP*/
@@ -439,7 +441,22 @@ a.button {
   .header__menu-button {
     display: none;
   }
+  .hero--home {
+    align-items: center;
+  }
+  .hero--home .site-container {
+    background: transparent;
+  }
 
+  .hero__img--headshot {
+    max-height: 500px;
+    object-fit: contain;
+    width: initial;
+    justify-self: center;
+    mix-blend-mode: screen;
+    transform: translateX(15vw);
+    margin-top: 0;
+  }
   .page-body {
     padding-right: 25%;
   }
@@ -453,16 +470,18 @@ a.button {
   .footer .nav {
     position: relative;
     bottom: 1rem;
-    right: 1rem;
+    right: 2rem;
+    /* margin-right: ; */
+  }
+
+  .footer .site-container {
+    padding-bottom: 0;
   }
 
   .footer__content {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-    padding-left: 2rem;
-    padding-right: 1rem;
-    padding-bottom: 1rem;
   }
 
   .footer .nav-list[aria-label='social media'] {

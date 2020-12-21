@@ -2,9 +2,7 @@
 layout: homelayout.njk
 ---
 
-<a href="https://support.eji.org/give/153413/#!/donation/checkout">
-  Black Lives Matter. Support&nbsp;the&nbsp;Equal&nbsp;Justice&nbsp;Initiative.
-</a>
+**Black Lives Matter.** [Support the Equal Justice Initiative.](https://support.eji.org/give/153413/#!/donation/checkout) </a>
 
 I work as a Senior UX Engineer at Regions Bank. Currently, I'm developing UIs for the bank's public-facing websites, consulting on UI systems architecture, and refining front-end build tooling.
 
