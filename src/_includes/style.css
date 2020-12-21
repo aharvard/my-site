@@ -446,6 +446,9 @@ a.button {
   .header__menu-button {
     display: none;
   }
+  .hero__copy {
+    padding-left: 0;
+  }
   .hero--home .site-container {
     display: grid;
     grid-template-columns: 1fr;
