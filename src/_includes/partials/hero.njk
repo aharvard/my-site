@@ -2,9 +2,11 @@
   <div class="hero{{" " + class if class }}">
     <div class="site-container">
       {% if heading %}
-        <h1 class="hero__heading">{{heading}}</h1>
-      {% endif %}
-      {{content | safe}}
+        <div class="hero__copy">
+          <h1 class="hero__heading">{{heading}}</h1>
+        {% endif %}
+        {{content | safe}}
+      </div>
     </div>
   </div>
 {% endmacro %}

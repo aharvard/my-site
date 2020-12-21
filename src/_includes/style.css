@@ -8,7 +8,7 @@ html {
   --gray-600: #757575;
   --gray-700: #616161;
   --gray-800: #424242;
-  --gray-900: #212121;
+  --gray-900: #26242c;
   --black: #111;
   --site-width: 700px;
   font-family: 'Inter', sans-serif;
@@ -276,8 +276,8 @@ a.button {
   justify-content: flex-start;
   background-image: radial-gradient(
     ellipse at bottom,
-    #26242c 0%,
-    #000000 100%
+    #26242c -50%,
+    #000000 80%
   );
 }
 
@@ -287,12 +287,10 @@ a.button {
 }
 
 .hero__copy {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
   padding: inherit;
+  padding-bottom: 2rem;
 }
+
 .hero__heading {
   margin: 8rem 0 0;
   font-weight: 900;
@@ -300,7 +298,6 @@ a.button {
 }
 
 .hero__blurb {
-  margin-bottom: 1rem;
   font-size: 4rem;
   font-weight: 900;
   font-size: clamp(1rem, 4vw, 3rem);
@@ -320,6 +317,10 @@ a.button {
 }
 
 .hero--home .hero__copy {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   background: linear-gradient(transparent, black);
 }
 
@@ -330,6 +331,8 @@ a.button {
   align-items: flex-end;
   text-align: right;
   flex-direction: column-reverse;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
 }
 
 .footer__content {
@@ -464,7 +467,6 @@ a.button {
     align-self: center;
     position: relative;
     background: transparent;
-    padding: 0;
   }
   .page-body {
     padding-right: 25%;
@@ -473,6 +475,7 @@ a.button {
   .footer {
     align-items: flex-end;
     flex-direction: row;
+    padding: 0;
   }
 
   .footer .nav {

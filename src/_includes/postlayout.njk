@@ -4,7 +4,7 @@ showHeaderName: true
 ---
 
 {% import "../_includes/partials/hero.njk" as heroMacro %}
-{{heroMacro.hero(heading = title, content="<p>passed in conetnt</p>")}}
+{{heroMacro.hero(heading = title, content=page.data.createdDate)}}
 
 <div class="site-container">
   <div class="page-body">
