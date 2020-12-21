@@ -76,7 +76,25 @@ const menuButton = document.querySelector('.header__menu-button');
 const modal = document.querySelector('.modal');
 
 function handleMenu() {
-  body.classList.toggle('menu-open');
-  modal.classList.toggle('modal--open');
+  let isOpen = false;
+
+  return function () {
+    const main = document.querySelector('.main');
+    const footer = document.querySelector('.footer');
+
+    isOpen = !isOpen;
+    body.classList.toggle('menu-open');
+    modal.classList.toggle('modal--open');
+    if (main) {
+      if (isOpen) {
+        main.style.display = 'none';
+        footer.style.display = 'none';
+      } else {
+        main.style.display = 'block';
+        footer.style.display = 'block';
+      }
+    }
+    return isOpen;
+  };
 }
-menuButton.addEventListener('click', handleMenu);
+menuButton.addEventListener('click', handleMenu());

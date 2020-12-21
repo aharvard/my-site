@@ -4,6 +4,7 @@ description: Senior UX Engineer/Interaction Designer hybrid. Enjoys writing mode
 header: true
 footer: true
 showHeaderName: false
+pattern: false
 ---
 
 {% set css %}
@@ -35,11 +36,15 @@ showHeaderName: false
     {% if header %}
       {{headerMacro.header(showHeaderName)}}
     {% endif %}
-    <main class="main">
-      {{ content | safe }}
-    </main>
-    {% if footer %}
 
+    {% if patterns %}
+      {{ content | safe }}
+    {% else %}
+      <main class="main">
+        {{ content | safe }}
+      </main>
+    {% endif %}
+    {% if footer %}
       {{footerMacro.footer()}}
     {% endif %}
     <script>
