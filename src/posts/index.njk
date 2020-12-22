@@ -6,19 +6,12 @@ showHeaderName: true
 ---
 
 {% import "../_includes/partials/hero.njk" as heroMacro %}
+{% import "../_includes/partials/post-list.njk" as postMacro %}
+
 {{heroMacro.hero(heading = title, blurb=false)}}
 
 <div class="site-container">
   <div class="page-body" >
-    {% for post in collections.post %}
-      <a href="{{post.url}}">
-        <h2>{{post.data.title}}</h2>
-        <p>Date: {{post.date | readableDate}}</p>
-        <p>{{post.data.description}}</p>
-        {% for tag in post.data.tags %}
-          <span >{{tag}}{{"," if tag !== post.data.tags[post.data.tags.length - 1]}}</span>
-        {% endfor %}
-      </a>
-    {% endfor %}
+    {{postMacro.postList(postData = collections.post, numberOfPosts=collections.post.length) }}
   </div>
 </div>
