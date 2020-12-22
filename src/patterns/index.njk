@@ -39,7 +39,6 @@ patterns: true
 
 {% pattern "Post List"%}
 {% import "../_includes/partials/post-list.njk" as postMacro %}
-
 <div class="site-container">
   <div class="page-body" >
     {{postMacro.postList(postData = collections.post, numberOfPosts = 3)}}

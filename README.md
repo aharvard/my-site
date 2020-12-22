@@ -1,5 +1,5 @@
 # Personal Site
 
-This repo is for the personal website of Andrew Harvard.
+This is my personal website!
 
-Made with Eleventy and hosted on Netlify.
+It's a static website built with Eleventy and some good ol' fashioned vanilla CSS and JavaScript. Don't run JS? No problem. I've progressively enhanced the site so that it works regardless.

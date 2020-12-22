@@ -1,7 +1,3 @@
-const footerDateSpan = document.getElementById('footer-date');
-const year = new Date();
-footerDateSpan.innerText = year.getFullYear();
-
 function themeToggle() {
   // Create DOM
   const body = document.querySelector('body');

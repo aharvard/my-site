@@ -39,6 +39,11 @@ module.exports = function (eleventyConfig) {
     `;
   });
 
+  eleventyConfig.addPairedShortcode(
+    'footerCopyright',
+    () => `&#169; ${new Date().getFullYear()} Andrew Harvard`,
+  );
+
   return {
     dir: {
       input: 'src',
