@@ -6,7 +6,7 @@ layout: homelayout.njk
 
 I work as a Senior UX Engineer at Regions Bank. Currently, I'm developing an enterprise design system, consulting on UI systems architecture, and refining front-end build tooling.
 
-I enjoy coding modern CSS and designing accessible HTML patterns. I believe that design is a team sport, and I love working with designers, content strategists, researchers, architects, and product folks.
+I enjoy writing modern CSS and designing accessible HTML patterns. I believe that design is a team sport, and I love working with designers, content strategists, researchers, architects, and product folks.
 
 I studied industrial design at Georgia Tech and typography at Savannah College of Art and Design. During that time, I gained work experience at CNN and Turner Broadcasting.
 

@@ -144,13 +144,18 @@ a.button {
   color: var(--gray-100);
 }
 
+.header__menu-button-container {
+  justify-self: flex-end;
+  z-index: 2;
+}
+
 .header__menu-button {
   appearance: none;
   background: transparent;
-  justify-self: flex-end;
   padding: 1rem;
-  scroll-margin-right: -1rem;
-  z-index: 2;
+  margin-right: -1rem;
+  display: flex;
+  align-items: center;
 }
 
 .header__menu-button:hover,
@@ -184,8 +189,12 @@ a.button {
 .menu-open #line-middle-1 {
   transform: rotate(45deg);
 }
+#line-middle-2 {
+  opacity: 0;
+}
 
 .menu-open #line-middle-2 {
+  opacity: 1;
   transform: rotate(-45deg);
 }
 
@@ -424,7 +433,6 @@ a.button {
 .pattern__block {
   outline: 1px solid;
   padding: 1rem;
-  position: relative;
 }
 
 .pattern__title {

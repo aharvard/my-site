@@ -1,6 +1,7 @@
-function themeToggle() {
+const body = document.querySelector('body');
+
+function renderThemeToggle() {
   // Create DOM
-  const body = document.querySelector('body');
   const footer = document.querySelector('.footer__content');
   const themeButton = document.createElement('button');
   themeButton.classList.add('theme-toggle-button');
@@ -64,33 +65,61 @@ function themeToggle() {
     window.requestAnimationFrame(updateButtonText);
   });
 }
+renderThemeToggle();
 
-themeToggle();
+function renderMenuButton() {
+  const modal = document.querySelector('.modal');
+  const menuButton = document.createElement('button');
+  menuButton.classList.add('header__menu-button');
+  menuButton.innerHTML = `
+    <svg 
+      height="14px" 
+      viewBox="0 0 22 14" 
+      width="22px" 
+      class="icon-menu" 
+      aria-hidde="true"
+      overflow="visible" 
+      version="1.1" 
+      xmlns="http://www.w3.org/2000/svg" 
+      xmlns:xlink="http://www.w3.org/1999/xlink">
+        <g 
+          id="menu-lines" 
+          fill="none" 
+          fill-rule="evenodd" 
+          stroke-linecap="round" 
+          stroke-linejoin="round" 
+          stroke-width="2">
+            <line class="menu-line" id="line-top" x1="1" y1="1" x2="21" y2="1" id="Path"></line>
+            <line class="menu-line" id="line-middle-1" x1="1" y1="7" x2="21" y2="7" id="Path"></line>
+            <line class="menu-line" id="line-middle-2" x1="1" y1="7" x2="21" y2="7" id="Path"></line>
+            <line class="menu-line" id="line-bottom" x1="1" y1="13" x2="21" y2="13" id="Path"></line>
+        </g>
+      </svg>`;
 
-const body = document.querySelector('.body');
-const menuButton = document.querySelector('.header__menu-button');
-const modal = document.querySelector('.modal');
+  document
+    .querySelector('.header__menu-button-container')
+    .insertAdjacentElement('afterbegin', menuButton);
 
-function handleMenu() {
-  let isOpen = false;
-
-  return function () {
-    const main = document.querySelector('.main');
-    const footer = document.querySelector('.footer');
-
-    isOpen = !isOpen;
-    body.classList.toggle('menu-open');
-    modal.classList.toggle('modal--open');
-    if (main) {
-      if (isOpen) {
-        main.style.display = 'none';
-        footer.style.display = 'none';
-      } else {
-        main.style.display = 'block';
-        footer.style.display = 'block';
+  function handleMenu() {
+    let isOpen = false;
+    return function () {
+      const main = document.querySelector('.main');
+      const footer = document.querySelector('.footer');
+      isOpen = !isOpen;
+      body.classList.toggle('menu-open');
+      modal.classList.toggle('modal--open');
+      if (main) {
+        if (isOpen) {
+          main.style.display = 'none';
+          footer.style.display = 'none';
+        } else {
+          main.style.display = 'block';
+          footer.style.display = 'block';
+        }
       }
-    }
-    return isOpen;
-  };
+      return isOpen;
+    };
+  }
+  menuButton.addEventListener('click', handleMenu());
 }
-menuButton.addEventListener('click', handleMenu());
+renderMenuButton();
