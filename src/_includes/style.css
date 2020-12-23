@@ -72,7 +72,8 @@ h3 {
   margin-top: 2em;
 }
 
-p {
+p,
+li {
   line-height: 1.75;
 }
 p a {
@@ -126,6 +127,21 @@ a.button {
   font-size: 1rem;
   color: var(--text-color);
   text-decoration: none;
+}
+
+figure {
+  border: 1px solid var(--text-color);
+  margin: 0;
+  padding: 1rem;
+}
+figure * + * {
+  margin-top: 1rem;
+}
+figcaption {
+  font-size: 90%;
+}
+blockquote {
+  margin: 0;
 }
 
 /* HEADER */

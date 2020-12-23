@@ -10,7 +10,7 @@ topics:
 
 Web components are ideal candidates for delivering design systems in organizations where tech stacks rely on a variety of front-end frameworks and libraries. They can reduce dependency-hell and spaghetti-code by encapsulating styling and behavior—write once and use them wherever HTML works (polyfills required).
 
-Web Components may not be great candidates for full-fledged single page apps (as of today) due to some temporary accessibility limitations with the shadow DOM and [Accessibility Object Model (AOM)](http://wicg.github.io/aom/explainer.html) specs. Fear not, browsers support is on the way!\_
+They may not be great candidates for full-fledged single page apps (as of the date of this post) due to some accessibility limitations with the shadow DOM and [Accessibility Object Model (AOM)](http://wicg.github.io/aom/explainer.html) specs. Fear not, browsers support is on the way!
 
 I heard about Web Components for the first time on [Shop Talk Show](https://shoptalkshow.com/episodes/276-web-components/), back in the fall of 2017. The idea sounded amazing, but when [Dave](https://twitter.com/davatron5000) & [Chris](https://twitter.com/chriscoyier) talked about browser support and the end to the HTML Imports spec, I kinda got bummed out.
 
@@ -38,7 +38,7 @@ Web components can be made with vanilla JavaScript, CSS, and HTML. You can find 
 
 Personally, I find the ergonomics of writing vanilla JS for Web Components to be a little uncomfortable. If that's your jam, you rock! 🤘
 
-### StencilJS — FTW!
+### Stencil
 
 Lucky for me there are some tools out there that take the pain out of building web components. I'm a big fan of [Stencil](https://stenciljs.com/). As they say on their website: "Stencil combines the best concepts of the most popular frontend frameworks and generates 100% standards-based Web Components that run in any modern browser."
 
