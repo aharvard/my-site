@@ -16,6 +16,19 @@ minHeight: auto
     <div class="post-content">
       {{ content | safe }}
     </div>
-    {{postMacro.postList(postData = collections.post, numberOfPosts=2) }}
+    {# {{postMacro.postList(postData = collections.post, numberOfPosts=2, page = page) }} #}
+
+    {% set previousPost = collections.post | getPreviousCollectionItem(page) %}
+    {% set nextPost = collections.post | getNextCollectionItem(page) %}
+    {% if nextPost %}
+      <p>
+        Next Blog Post: <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>
+      </p>
+    {% endif %}
+    {% if previousPost %}
+      <p>
+        Previous Blog Post: <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>
+      </p>
+    {% endif %}
   </div>
 </div>
