@@ -60,6 +60,7 @@ function renderThemeToggle() {
       isDark = false;
       isLight = true;
     }
+    mirrorToLocalStorage();
     window.requestAnimationFrame(setThemeClass);
     window.requestAnimationFrame(updateButtonText);
   });
