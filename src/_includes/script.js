@@ -21,25 +21,32 @@ function renderThemeToggle() {
   }
 
   // Manages adding and toggle body classes
-  function themeClass() {
-    // set class if there is none set
-    if (body.classList.length === 0) {
-      body.classList.add(isDark ? 'dark' : isLight ? 'light' : null);
+  function setThemeClass() {
+    if (isDark) {
+      body.classList.remove('light');
+      body.classList.add('dark');
     } else {
-      // toggle classes if one is set
-
-      if (isDark) {
-        body.classList.remove('light');
-        body.classList.add('dark');
-      } else {
-        body.classList.remove('dark');
-        body.classList.add('light');
-      }
+      body.classList.remove('dark');
+      body.classList.add('light');
     }
   }
 
+  function mirrorToLocalStorage() {
+    localStorage.setItem('themePref', JSON.stringify({isDark, isLight}));
+  }
+
+  function restoreFromLocalStorage() {
+    const themPref = JSON.parse(localStorage.getItem('themePref'));
+    if (themPref) {
+      isDark = themPref.isDark;
+      isLight = themPref.isLight;
+      console.log('local storage restored', {themPref});
+    }
+  }
+  restoreFromLocalStorage();
+
   // Set class based on current color
-  themeClass();
+  setThemeClass();
 
   // Update Button Text
   updateButtonText();
@@ -53,7 +60,7 @@ function renderThemeToggle() {
       isDark = false;
       isLight = true;
     }
-    window.requestAnimationFrame(themeClass);
+    window.requestAnimationFrame(setThemeClass);
     window.requestAnimationFrame(updateButtonText);
   });
 
@@ -61,7 +68,8 @@ function renderThemeToggle() {
   themeButton.addEventListener('click', function () {
     isDark = !isDark;
     isLight = !isLight;
-    window.requestAnimationFrame(themeClass);
+    mirrorToLocalStorage();
+    window.requestAnimationFrame(setThemeClass);
     window.requestAnimationFrame(updateButtonText);
   });
 }

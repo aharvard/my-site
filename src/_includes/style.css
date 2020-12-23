@@ -8,9 +8,9 @@ html {
 
   --gray-600: #757575;
   --gray-700: #616161;
-  --gray-800: #424242;
+  --gray-800: #46434e;
   --gray-900: #201d29;
-  --black: #111;
+  --black: #13111c;
   --site-width: 700px;
   --site-gutter: 1.5rem;
   font-family: 'Inter', sans-serif;
@@ -24,6 +24,8 @@ body.light {
   --text-color: var(--gray-800);
   --interactive-text-color: var(--gray-800);
   --interactive-text-hover-color: var(--gray-900);
+  --header-background: var(--gray-900);
+  --hero-glow: var(--gray-800);
 }
 body.dark {
   --background-color: var(--gray-900);
@@ -33,6 +35,8 @@ body.dark {
   --text-color: var(--gray-400);
   --interactive-text-color: var(--gray-400);
   --interactive-text-hover-color: var(--gray-100);
+  --header-background: var(--black);
+  --hero-glow: var(--gray-900);
 }
 @media (prefers-color-scheme: dark) {
   body {
@@ -42,6 +46,8 @@ body.dark {
     --text-color: var(--gray-400);
     --interactive-text-color: var(--gray-400);
     --interactive-text-hover-color: var(--gray-100);
+    --header-background: var(--black);
+    --hero-glow: var(--gray-900);
   }
 }
 
@@ -151,7 +157,7 @@ blockquote {
 /* HEADER */
 
 .header {
-  background: var(--gray-900);
+  background: var(--header-background);
   padding: 1rem 0;
 }
 
@@ -345,8 +351,8 @@ blockquote {
 .hero__background {
   background-image: radial-gradient(
     ellipse at bottom,
-    #46434e -20%,
-    #201d29 50%
+    var(--hero-glow) -20%,
+    var(--header-background) 50%
   );
   clip-path: polygon(0% -1%, 100% -1%, 100% 80%, 0% 100%);
 }
@@ -356,14 +362,14 @@ blockquote {
   color: var(--gray-100);
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  min-height: 250px;
+  justify-content: flex-start;
+  min-height: 180px;
   padding-bottom: 3rem;
   position: relative;
 }
 
 .hero .site-container * + * {
-  margin-top: 1.5rem;
+  margin-top: 1rem;
 }
 
 .hero__heading {
@@ -374,7 +380,7 @@ blockquote {
 }
 .hero__blurb,
 .hero__blurb * {
-  font-size: clamp(1rem, 3vw, 2rem);
+  font-size: clamp(1.5rem, 3vw, 2rem);
   line-height: 1;
   font-weight: 900;
 }
@@ -400,7 +406,7 @@ blockquote {
   border: 4px solid var(--background-color);
   position: absolute;
   right: 10vw;
-  bottom: -5%;
+  bottom: -10%;
   z-index: 1;
 }
 
@@ -542,7 +548,9 @@ blockquote {
   }
   .hero .site-container {
     min-height: 400px;
+    justify-content: center;
   }
+
   .hero__topics {
     width: 50vw;
     max-width: 800px;
