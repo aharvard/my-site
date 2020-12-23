@@ -348,7 +348,7 @@ blockquote {
     #46434e -20%,
     #201d29 50%
   );
-  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  clip-path: polygon(0% -1%, 100% -1%, 100% 80%, 0% 100%);
 }
 
 .hero .site-container {
@@ -367,7 +367,7 @@ blockquote {
 }
 
 .hero__heading {
-  font-size: clamp(3rem, 5vw, 5rem);
+  font-size: clamp(2.25rem, 5vw, 5rem);
   line-height: 1;
   margin: 0;
   font-weight: 900;
@@ -379,7 +379,7 @@ blockquote {
   font-weight: 900;
 }
 .hero__topics {
-  width: 75%;
+  width: 40vw;
 }
 
 .hero__topics .post__topic {
@@ -392,7 +392,7 @@ blockquote {
 }
 
 .hero__img--headshot {
-  font-size: clamp(0.75rem, 2vw, 1rem);
+  font-size: clamp(0.75rem, 2.5vw, 1.5rem);
   height: 10em;
   width: 10em;
   border-radius: 10em;
@@ -544,10 +544,11 @@ blockquote {
     min-height: 400px;
   }
   .hero__topics {
-    width: 100%;
+    width: 50vw;
+    max-width: 800px;
   }
   .hero__img--headshot {
-    right: 20vw;
+    left: 60vw;
   }
   .page-body {
     padding-right: 25%;
