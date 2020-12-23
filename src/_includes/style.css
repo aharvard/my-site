@@ -366,6 +366,7 @@ blockquote {
   font-size: clamp(2rem, 5vw, 5rem);
   line-height: 1;
   margin: 0;
+  font-weight: 900;
 }
 .hero__blurb,
 .hero__blurb * {
