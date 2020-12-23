@@ -14,10 +14,10 @@
                 {% endif %}
             {% endfor %}
           </h3>
-          <p class="post__date">{{post.date | readableDate}}</p>
+          <span class="post__date">{{post.date | readableDate}}</span>
           <div class="post__topics">
             {% for topic in post.data.topics %}
-              <span class="post_topic">{{topic}}{{"," if topic !== post.data.topics[post.data.topics.length - 1]}}</span>
+              <span class="post__topic">{{topic}}{{"," if topic !== post.data.topics[post.data.topics.length - 1]}}</span>
             {% endfor %}
           </div>
           <p class="post__description">{{post.data.description}}</p>

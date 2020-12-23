@@ -1,4 +1,4 @@
-{% macro hero(heading = "Heading", blurb = false, class = false, headshot = false) %}
+{% macro hero(heading = "Heading", blurb = false, class = false, headshot = false, topics = false) %}
   <div class="hero{{" " + class if class }}">
     {% if headshot %}
       {{headshot | safe}}
@@ -8,6 +8,13 @@
       {% if blurb %}
         <div class="hero__blurb">
           {{blurb | safe}}
+        </div>
+      {% endif %}
+      {% if topics %}
+        <div class="hero__topics">
+          {% for topic in topics %}
+            <span class="post__topic">{{topic}}</span>{{"," if topic !== topics[topics.length - 1]}}
+          {% endfor %}
         </div>
       {% endif %}
     </div>

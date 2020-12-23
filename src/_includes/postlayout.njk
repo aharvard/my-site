@@ -8,17 +8,14 @@ minHeight: auto
 {% import "../_includes/partials/hero.njk" as heroMacro %}
 {% import "../_includes/partials/post-list.njk" as postMacro %}
 
-{{heroMacro.hero(heading = title, blurb=page.date | readableDate)}}
+{{heroMacro.hero(heading = title, blurb=page.date | readableDate, topics = topics)}}
 
 <div class="site-container">
   <div class="page-body" style="--page-body-min-height:{{minHeight}}">
-    <a class="text-style-nav-link" href="/posts">All Posts</a>
-    <div>
-      {% for topic in topics %}
-        {{topic}}{{"," if topic !== topics[topics.length - 1]}}
-      {% endfor %}
+    <div></div>
+    <div class="post-content">
+      {{ content | safe }}
     </div>
-    {{ content | safe }}
     {{postMacro.postList(postData = collections.post, numberOfPosts=2) }}
   </div>
 </div>
