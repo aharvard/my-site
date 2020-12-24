@@ -36,9 +36,9 @@ The progress of the web moves incredibly fast, a lot of things have happened sin
 
 Web components can be made with vanilla JavaScript, CSS, and HTML. You can find some in-depth resources on MDN's [Concepts and Usage](https://developer.mozilla.org/en-US/docs/Web/Web_Components). Keep in mind that older browsers will need some support via polyfills and take extra care to ensure accessibility.
 
-Personally, I find the ergonomics of writing vanilla JS for Web Components to be a little uncomfortable. If that's your jam, you rock! 🤘
-
 ### Stencil
+
+I find the ergonomics of writing vanilla JS for Web Components to be a little uncomfortable. If that's your jam, you rock!
 
 Lucky for me there are some tools out there that take the pain out of building web components. I'm a big fan of [Stencil](https://stenciljs.com/). As they say on their website: "Stencil combines the best concepts of the most popular frontend frameworks and generates 100% standards-based Web Components that run in any modern browser."
 

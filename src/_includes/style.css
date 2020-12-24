@@ -5,10 +5,9 @@ html {
   --gray-300: #e0e0e0;
   --gray-400: #bdbdbd;
   --gray-500: #9e9e9e;
-
-  --gray-600: #757575;
-  --gray-700: #616161;
-  --gray-800: #46434e;
+  --gray-600: #605d67;
+  --gray-700: #45424d;
+  --gray-800: #312e39;
   --gray-900: #201d29;
   --black: #13111c;
   --site-width: 700px;
@@ -25,29 +24,35 @@ body.light {
   --interactive-text-color: var(--gray-800);
   --interactive-text-hover-color: var(--gray-900);
   --header-background: var(--gray-900);
+  --hero-text: var(--gray-300);
   --hero-glow: var(--gray-800);
+  --code-background: var(--gray-300);
 }
 body.dark {
-  --background-color: var(--gray-900);
+  --background-color: var(--gray-800);
   --button-color: var(--black);
   --button-hover-color: var(--gray-800);
   --button-text: var(--gray-400);
-  --text-color: var(--gray-400);
-  --interactive-text-color: var(--gray-400);
+  --text-color: var(--gray-300);
+  --interactive-text-color: var(--gray-200);
   --interactive-text-hover-color: var(--gray-100);
   --header-background: var(--black);
+  --hero-text: var(--gray-300);
   --hero-glow: var(--gray-900);
+  --code-background: var(--gray-900);
 }
 @media (prefers-color-scheme: dark) {
   body {
-    --background-color: var(--gray-900);
+    --background-color: var(--gray-800);
     --button-color: var(--gray-100);
     --button-hover-color: var(--gray-800);
-    --text-color: var(--gray-400);
-    --interactive-text-color: var(--gray-400);
+    --text-color: var(--gray-300);
+    --interactive-text-color: var(--gray-200);
     --interactive-text-hover-color: var(--gray-100);
     --header-background: var(--black);
+    --hero-text: var(--gray-300);
     --hero-glow: var(--gray-900);
+    --code-background: var(--gray-900);
   }
 }
 
@@ -88,6 +93,14 @@ li {
 }
 p a {
   font-weight: 700;
+}
+
+code {
+  font-size: 120%;
+  font-weight: bold;
+  background: var(--code-background);
+  padding: 0.1em 0.3em;
+  border-radius: 2px;
 }
 
 li + li:not([class]) {
@@ -275,9 +288,7 @@ blockquote {
   left: 0;
   right: 0;
   z-index: 1;
-  color: var(--gray-100);
   display: none;
-  outline: 1px solid;
 }
 .modal--open {
   display: block;
@@ -359,7 +370,7 @@ blockquote {
 
 .hero .site-container {
   align-items: stretch;
-  color: var(--gray-100);
+  color: var(--hero-text);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -517,7 +528,14 @@ blockquote {
   font-family: monospace;
   font-size: 1.5rem;
 }
-
+.color-swatches {
+  padding: 2rem;
+  background: white;
+}
+.color-swatch {
+  height: 10rem;
+  padding: 1rem;
+}
 /* VIDEO */
 .video__wrapper {
   position: relative;
@@ -560,7 +578,7 @@ blockquote {
   }
   .page-body {
     padding-right: 25%;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
   .post__content {
     grid-template-areas:
