@@ -2,7 +2,8 @@
 title: Critique Cards
 cta: Check it out!
 href: https://critique-cards.netlify.app/
-description: Design critiques can be challenging. Next time you're not sure how to ask for feedback or need help guiding a design review, draw a card and start a discussion!
+description: I got inspired to make a digital tool that helps with design critiques for distributed teams. This project gave me a great excuse to learn Svelte and practice JavaScript fundamentals.
+
 minHeight: 70vh
 tags:
   - post
@@ -11,23 +12,29 @@ topics:
   - svelte
 ---
 
-Design critiques can be challenging. Next time you're unsure how to ask for design feedback or need help providing constructive criticism in a design review, draw a card, and start a discussion — heck, you can even use these cards to critique your own work.
+I got inspired to make a digital tool that helps with design critiques for distributed teams. This project gave me a great excuse to learn Svelte and practice JavaScript fundamentals.
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">I got inspired by <a href="https://twitter.com/mhjallan?ref_src=twsrc%5Etfw">@mhjallan</a>&#39;s Critique Cards and made a digital version using <a href="https://twitter.com/sveltejs?ref_src=twsrc%5Etfw">@sveltejs</a>, <a href="https://twitter.com/Netlify?ref_src=twsrc%5Etfw">@Netlify</a>, and <a href="https://twitter.com/hashtag/StreamLineIcons?src=hash&amp;ref_src=twsrc%5Etfw">#StreamLineIcons</a> 🚀<a href="https://t.co/Cbv0xL3g3e">https://t.co/Cbv0xL3g3e</a></p>&mdash; Andrew Harvard (@aharvard) <a href="https://twitter.com/aharvard/status/1167238583847182336?ref_src=twsrc%5Etfw">August 30, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+Check out [Critique Cards](https://critique-cards.netlify.app/)!
 
-## Critique Cards as a Website
+## Background
 
-I learned about Critique Cards from a coworker when she brought a couple of card decks to an in-person planning event at work. She explained how Mikey provides a PDF online and allows anyone to take the file and print a card deck of their own.
+I was looking for an opportunity to build a simple web app with [Svelte](/) when inspiration struck.
 
-I immediately thought that these cards looked great and could be an excellent tool for design crits. However, as a distributed and remote team, having a shared experience around a physical deck of cards would be challenging.
+I work on a remote UX team at Regions, distributed across multiple states and timezones in the US. A few times a year, we travel to Birmingham, AL, for in-person planning events. While at one of these events, a coworker handed me a deck of Critique Cards. Instead of a traditional deck of playing cards, each card had a specific question to help facilitate design critique, designed by [Mikey Allan](/).
 
-To solve the remote collaboration issue, I thought it would be a lot of fun to make a website.
+I thought these cards were excellent and that they would be a lot of fun to use in future crits. However, it would be challenging to have a shared experience around a physical deck of cards as a fully remote team. To solve this issue, I wanted to make a digital version of this deck of cards.
 
-## The Tech
+This was the perfect opportunity to learn Svelte and practice JavaScript fundamentals. I set out to replicate the card deck with the following functionality:
 
-[critique-cards.netlify.app/](https://critique-cards.netlify.app/) is a static site built with Svelte and hosted on Netlify.
+- Users can draw one card at a time
+- Users can shuffle all cards at any point in time
+- Users must be able to draw all cards from the deck multiple times
 
-Svelte is a framework that builds optimized JavaScript which affords fast load times and highly reactive experiences.
+## Technical
+
+The [Critque Cards website](critique-cards.netlify.app/) is built with [Svelte](/) and hosted on Netlify.
+
+Svelte is a framework that builds optimized JavaScript, which affords fast load times and highly reactive experiences.
 
 The card content is provided with an array of objects, and the deck state is tracked with two arrays: `undrawnCards` & `drawnCards`.
 
@@ -42,3 +49,15 @@ Each time a card is drawn, a property on the card object is modified. That value
 All animations are done with CSS. When new elements with the proper classes are injected into the DOM, the keyframe-based animations immediately play.
 
 The flip effect is achieved by "unwinding" the card's transformed state. When a card is drawn, the card that's about to be flipped shows up on top of the deck's undrawn pile, facing backward and translated to its start location. The animation then rotates and slides the card to the drawn pile while, at the same time, z-index is manipulated to help with multiple rapid-fire draws.
+
+If you want to see more, you can view [the source code](/).
+
+## Conclusion
+
+I had a lot of fun with this project and learned some new tricks. For example, I learned about the difference between referencing versus copying an existing array in JavaScript.
+
+Initially, I could only draw each card from the deck once. I was unable to shuffle and start over. It was like every time I was drawing a card, I was throwing it into the trash. I discovered that I was mutating, or changing, the original card data array each time I drew a card.
+
+To fix the problem, I discovered that I was making reference to the original card data array instead of copying, or cloning, the original array's values. Fixing this issue enabled all cards to be drawn from a deck once and redrawn multiple times.
+
+So, next time you're unsure how to ask for design feedback or need help providing constructive criticism in a design review, draw a card, and start a discussion — heck, you can even use these cards to critique your own work.
