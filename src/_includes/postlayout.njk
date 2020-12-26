@@ -5,8 +5,9 @@ heroBlurb: "Im the default Hero Blurb"
 minHeight: auto
 ---
 
-{% import "../_includes/partials/hero.njk" as heroMacro %}
-{% import "../_includes/partials/post-list.njk" as postMacro %}
+{% import "./partials/hero.njk" as heroMacro %}
+{% import "./partials/post-list.njk" as postMacro %}
+{% import "./partials/next-prev-post-links.njk" as postLinksMacro %}
 
 {{heroMacro.hero(heading = title, blurb=page.date | readableDate, topics = topics, headshot=true)}}
 
@@ -16,19 +17,11 @@ minHeight: auto
     <div class="post-content">
       {{ content | safe }}
     </div>
-    {# {{postMacro.postList(postData = collections.post, numberOfPosts=2, page = page) }} #}
 
     {% set previousPost = collections.post | getPreviousCollectionItem(page) %}
     {% set nextPost = collections.post | getNextCollectionItem(page) %}
-    {% if nextPost %}
-      <p>
-        Next Blog Post: <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>
-      </p>
-    {% endif %}
-    {% if previousPost %}
-      <p>
-        Previous Blog Post: <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>
-      </p>
-    {% endif %}
+
+    {{postLinksMacro.nextPrevPostLinks(previousPost, nextPost)}}
+
   </div>
 </div>

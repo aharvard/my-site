@@ -1,0 +1,19 @@
+{% macro nextPrevPostLinks(previousPost, nextPost) %}
+  <h2>More Posts</h2>
+
+  <div class="next-prev-post-links{{ " post-links--prev-only" if not nextPost}}">
+    {% if nextPost %}
+      <a class="post-link post-link--next text-style-nav-link" href="{{ nextPost.url }}">
+        <div class="post-link-icon">{% include "./icon-left-arrow.svg" %}</div>
+        <div class="post-link-text">{{ nextPost.data.title }}</div>
+      </a>
+    {% endif %}
+    {% if previousPost %}
+      <a class="post-link post-link--prev text-style-nav-link" href="{{ previousPost.url }}">
+        <div class="post-link-text">{{ previousPost.data.title }}</div>
+        <div class="post-link-icon">{% include "./icon-right-arrow.svg" %}</div>
+      </a>
+    {% endif %}
+
+  </div>
+{% endmacro %}

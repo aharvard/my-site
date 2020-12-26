@@ -70,6 +70,24 @@ patterns: true
 </div>
 {% endpattern %}
 
+{% pattern "Next/Prev Post Links"%}
+{% import "../_includes/partials/next-prev-post-links.njk" as postLinksMacro %}
+
+<div class="site-container">
+  <div class="page-body" >
+    {{postLinksMacro.nextPrevPostLinks(
+        previousPost = {
+          data: {title: "Previous Post"}, 
+          url: "/"}, 
+        nextPost = {
+          data: {title: "Previous Post"}, 
+          url: "/"})
+      }}
+
+  </div>
+</div>
+{% endpattern %}
+
 {% pattern "Footer"%}
 {% import "../_includes/partials/footer.njk" as footerMacro %}
 {{footerMacro.footer()}}
