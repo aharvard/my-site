@@ -1,6 +1,7 @@
 const CleanCSS = require('clean-css');
 const {minify} = require('terser');
 const pluginDate = require('eleventy-plugin-date');
+const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('src/assets');
@@ -44,6 +45,8 @@ module.exports = function (eleventyConfig) {
     'footerCopyright',
     () => `&#169; ${new Date().getFullYear()} Andrew Harvard`,
   );
+
+  eleventyConfig.addPlugin(syntaxHighlight);
 
   return {
     dir: {

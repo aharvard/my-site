@@ -1,7 +1,6 @@
 ---
 title: Svelte Clocks
-description: Lorem ipsum set dolar!
-minHeight: 70vh
+description: An ongoing creative coding project, inspired by John Maeda’s 12 o'clocks. Each clock is unique and developed with various techniques such as SVG, Canvas, and HTML.
 tags:
   - post
   - project
