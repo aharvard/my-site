@@ -1,7 +1,6 @@
 ---
 title: Critique Cards
 description: I got inspired to make a digital tool that helps with design critiques for distributed teams. This project gave me a great excuse to learn Svelte and practice JavaScript fundamentals.
-minHeight: 70vh
 tags:
   - post
   - project
