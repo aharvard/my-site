@@ -8,13 +8,11 @@ topics:
   - web components
 ---
 
-Web components are ideal candidates for delivering design systems in organizations where tech stacks rely on a variety of front-end frameworks and libraries. They can reduce dependency-hell and spaghetti-code by encapsulating styling and behavior—write once and use them wherever HTML works (polyfills required).
+Web components are ideal candidates for delivering design systems in organizations where tech stacks rely on a variety of front-end JavaScript frameworks and libraries.
 
-They may not be great candidates for full-fledged single page apps (as of the date of this post) due to some accessibility limitations with the shadow DOM and [Accessibility Object Model (AOM)](http://wicg.github.io/aom/explainer.html) specs. Fear not, browsers support is on the way!
+They mitigate framework lock-in by delivering encapsulated vanilla styling and behavior. Write once and use them wherever HTML works (polyfills required).
 
-I heard about Web Components for the first time on [Shop Talk Show](https://shoptalkshow.com/episodes/276-web-components/), back in the fall of 2017. The idea sounded amazing, but when [Dave](https://twitter.com/davatron5000) & [Chris](https://twitter.com/chriscoyier) talked about browser support and the end to the HTML Imports spec, I kinda got bummed out.
-
-The progress of the web moves incredibly fast, a lot of things have happened since [episode 276](https://shoptalkshow.com/episodes/276-web-components/) aired: browser support has improved, new specs have landed, and some pretty great tooling has emerged. I think it's time to take another look－spoiler alert, things are looking pretty great!
+They may not be great candidates for full-fledged single page apps (as of the date of this post) due to some accessibility limitations with the shadow DOM and [Accessibility Object Model (AOM)](http://wicg.github.io/aom/explainer.html) specs. Over time, we should see more browsers supporting Web Components.
 
 ## What are Web Components?
 

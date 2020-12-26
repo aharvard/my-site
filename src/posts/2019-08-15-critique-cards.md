@@ -12,7 +12,7 @@ project:
   href: https://critique-cards.netlify.app/
 ---
 
-I got inspired to make a digital version of a physical tool that helps with design critiques, for distributed teams. This project gave me a great excuse to learn [Svelte](https://svelte.dev/) and practice JavaScript fundamentals.
+I got inspired to make a digital version of a physical tool that helps with design critiques, geared towards distributed design teams. This project gave me a great excuse to learn [Svelte](https://svelte.dev/) and practice JavaScript fundamentals.
 
 Check out [Critique Cards]({{project.href}})!
 
