@@ -46,7 +46,7 @@ module.exports = function (eleventyConfig) {
     () => `&#169; ${new Date().getFullYear()} Andrew Harvard`,
   );
 
-  eleventyConfig.addPlugin(syntaxHighlight);
+  eleventyConfig.addPlugin(syntaxHighlight, {trim: true});
 
   return {
     dir: {

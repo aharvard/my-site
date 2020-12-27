@@ -1,5 +1,12 @@
 {% macro nextPrevPostLinks(previousPost, nextPost) %}
-  <h2>More Posts</h2>
+
+  {% if not nextPost %}
+    <h2>Previous Post</h2>
+  {% elif not previousPost %}
+    <h2>Next Post</h2>
+  {% else %}
+    <h2>More Posts</h2>
+  {% endif %}
 
   <div class="next-prev-post-links{{ " post-links--prev-only" if not nextPost}}">
     {% if nextPost %}
