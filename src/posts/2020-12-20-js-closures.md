@@ -57,3 +57,5 @@ jump();
 Notice how the `count` variable is not shared between `step()` and `jump()`. Calling `step()` does not affect the `jump()` count.
 
 Since `let count = 0` is contained in the scope of `counter()`, we can declare scope globally, or locally in another function, and it would not conflict.
+
+Since `let count = 0` is contained in the `counter()` scope, we could declare a new variable called `count` globally or locally in another function, and it would not conflict.
