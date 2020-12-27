@@ -1,10 +1,12 @@
 ---
 title: Closures
-description: JS reminder about what closuers are
+description: Closures allow a child function to access variables from higher-level scope even after the parent function has already been called or "closed" over.
+
 tags:
   - post
   - code
 topics:
+  - tip
   - JavaScript
 project:
   href: https://svelte-clocks.netlify.app/
