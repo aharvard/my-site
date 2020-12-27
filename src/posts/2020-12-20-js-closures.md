@@ -12,13 +12,13 @@ project:
   href: https://svelte-clocks.netlify.app/
 ---
 
-## What are Closures?
+## What is a Closure?
 
-Closures allow a child function to access variables from higher-level scope even after the parent function has already been called or "closed" over.
+A closure is a programming concept where a child function has access to variables from higher-level scope even after the parent function has already been called or "closed" over.
 
-Another way of thinking about closures is that they encapsulate scope and functionality into a single function call. This keeps the global scope clean and optimizes for reusability.
+Another way of thinking about closures is that they encapsulate scope and functionality into a single function call. This keeps the global scope clean and makes the function reusable.
 
-For example, let's make a `counter()` function that helps us count things:
+To illustrate the concept, let's make a `counter()` function:
 
 ```jsx
 function counter(name) {
@@ -56,8 +56,6 @@ jump();
 // The jumps count is 2
 ```
 
-Notice how the `count` variable is not shared between `step()` and `jump()`. Calling `step()` does not affect the `jump()` count.
+Notice that calling `step()` doesn't affect the `jump()` count and that `jump()` doesn't affect the `step()` count.
 
-Since `let count = 0` is contained in the scope of `counter()`, we can declare scope globally, or locally in another function, and it would not conflict.
-
-Further, since `let count = 0` is contained in the `counter()` scope, we could declare a new variable called `count` globally or locally in another function, and it would not conflict.
+Additionally, because `count` is bound to the lexical scope of `counter()`, we can declare `count` as a variable globally or locally without conflicts.
