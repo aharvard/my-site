@@ -27,7 +27,7 @@ body.light {
   --hero-text: var(--gray-100);
   --hero-glow: var(--gray-800);
   --code-block-background: white;
-  --code-base-color: var(--text-color);
+  --code-base-text-color: var(--text-color);
   --code-comment-color: var(--text-color);
   --code-punctuation-color: var(--gray-600);
   --code-property-color: #905;
@@ -38,7 +38,7 @@ body.light {
   --code-function-color: #dd4a68;
   --code-keyword-color: #07a;
   --code-selected-color: inherit;
-  --code-inline-code-color: var(--code-base-color);
+  --code-inline-code-color: var(--code-base-text-color);
   --code-inline-code-background: var(--code-block-background);
   --code-highlight-background: #f7ebc6;
   --code-highlight-accent: #f7d87c;
@@ -55,7 +55,7 @@ body.dark {
   --hero-text: var(--gray-300);
   --hero-glow: var(--gray-900);
   --code-block-background: var(--gray-900);
-  --code-base-color: var(--text-color);
+  --code-base-text-color: var(--text-color);
   --code-comment-color: var(--gray-500);
   --code-punctuation-color: var(--gray-500);
   --code-property-color: #e0288d;
@@ -63,10 +63,10 @@ body.dark {
   --code-operator-color: #6fc977d8;
   --code-operator-background: var(--code-block-background);
   --code-variable-color: #e90;
-  --code-function-color: #353430;
+  --code-function-color: #f05d7a;
   --code-keyword-color: #73c8ec;
   --code-selected-color: inherit;
-  --code-inline-code-color: var(--code-base-color);
+  --code-inline-code-color: var(--code-base-text-color);
   --code-inline-code-background: var(--code-block-background);
   --code-highlight-background: #f7ebc6;
   --code-highlight-accent: #f7d87c;
@@ -83,7 +83,7 @@ body.dark {
     --hero-text: var(--gray-300);
     --hero-glow: var(--gray-900);
     --code-block-background: var(--gray-900);
-    --code-base-color: var(--text-color);
+    --code-base-text-color: var(--text-color);
     --code-comment-color: var(--gray-500);
     --code-punctuation-color: var(--gray-500);
     --code-property-color: #e0288d;
@@ -91,10 +91,10 @@ body.dark {
     --code-operator-color: #6fc977d8;
     --code-operator-background: var(--code-block-background);
     --code-variable-color: #e90;
-    --code-function-color: #353430;
+    --code-function-color: #f05d7a;
     --code-keyword-color: #73c8ec;
     --code-selected-color: inherit;
-    --code-inline-code-color: var(--code-base-color);
+    --code-inline-code-color: var(--code-base-text-color);
     --code-inline-code-background: var(--code-block-background);
     --code-highlight-background: #f7ebc6;
     --code-highlight-accent: #f7d87c;
