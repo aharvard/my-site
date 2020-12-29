@@ -137,7 +137,7 @@ li {
   line-height: 1.75;
 }
 p a {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 li + li:not([class]) {
@@ -183,7 +183,7 @@ a.button {
 }
 
 .text-style-nav-link {
-  font-weight: 700;
+  font-weight: 600;
   font-size: 1rem;
   color: var(--text-color);
   text-decoration: none;
@@ -593,7 +593,7 @@ blockquote {
 .post__topic {
   text-transform: uppercase;
   letter-spacing: 0.2ch;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 1rem;
 }
 
