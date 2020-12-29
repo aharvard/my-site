@@ -25,11 +25,11 @@ patterns: true
 <div class="site-container">
   <div class="page-body">
     <div class="color-swatches">
-      <div class="color-swatch" style="background: var(--gray-100); ">--gray-100</div>
-      <div class="color-swatch" style="background: var(--gray-200); ">--gray-200</div>
-      <div class="color-swatch" style="background: var(--gray-300); ">--gray-300</div>
-      <div class="color-swatch" style="background: var(--gray-400); ">--gray-400</div>
-      <div class="color-swatch" style="background: var(--gray-500); ">--gray-500</div>
+      <div class="color-swatch" style="background: var(--gray-100); color: var(--gray-900) ">--gray-100</div>
+      <div class="color-swatch" style="background: var(--gray-200); color: var(--gray-900) ">--gray-200</div>
+      <div class="color-swatch" style="background: var(--gray-300); color: var(--gray-900) ">--gray-300</div>
+      <div class="color-swatch" style="background: var(--gray-400); color: var(--gray-900) ">--gray-400</div>
+      <div class="color-swatch" style="background: var(--gray-500); color: var(--gray-900) ">--gray-500</div>
       <div class="color-swatch" style="background: var(--gray-600); color: white">--gray-600</div>
       <div class="color-swatch" style="background: var(--gray-700); color: white">--gray-700</div>
       <div class="color-swatch" style="background: var(--gray-800); color: white">--gray-800</div>
@@ -80,12 +80,32 @@ patterns: true
           data: {title: "Previous Post"}, 
           url: "/"}, 
         nextPost = {
-          data: {title: "Previous Post"}, 
+          data: {title: "Next Post"}, 
+          url: "/"})
+      }}
+  </div>
+</div>
+<div class="site-container">
+  <div class="page-body" >
+    {{postLinksMacro.nextPrevPostLinks(
+
+        nextPost = {
+          data: {title: "Next Post"}, 
           url: "/"})
       }}
 
   </div>
 </div>
+<div class="site-container">
+  <div class="page-body" >
+    {{postLinksMacro.nextPrevPostLinks(
+        previousPost = {
+          data: {title: "Previous Post"}, 
+          url: "/"})
+      }}
+  </div>
+</div>
+
 {% endpattern %}
 
 {% pattern "Footer"%}
