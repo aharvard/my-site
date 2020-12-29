@@ -47,10 +47,7 @@ On load, and whenever shuffled, the card objects are randomly sorted and dumped 
 
 Each time a card is drawn, a property on the card object is modified. That value is used to determine if the card should exist in the `undrawnCards` or `drawnCards` array.
 
-Whenever the two arrays are modified, magic happens, thanks to Svelte:
-
-- The `undrawnCards` array keeps track of the deck state.
-- Whenever a card is added to the `drawnCards` array, Svelte injects that new card into the DOM, and the animations begin.
+Whenever a card is added to the `drawnCards` array, Svelte injects that new card into the DOM, and the animations begin.
 
 All animations are done with CSS. When new elements are injected into the DOM, the keyframe-based animations immediately play.
 

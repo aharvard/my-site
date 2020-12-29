@@ -17,13 +17,7 @@
             {% endfor %}
           </div>
           <p class="post__description">{{post.data.description}}</p>
-          {% for tag in post.data.tags %}
-            {% if tag === "project" %}
-              <div>
-                {{tag}}
-              </div>
-            {% endif %}
-          {% endfor %}
+
         </div>
       </a>
     {% endfor %}
