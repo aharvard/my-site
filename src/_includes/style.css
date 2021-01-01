@@ -133,7 +133,8 @@ h6 {
 }
 
 p,
-li {
+li,
+blockquote {
   line-height: 1.75;
 }
 p a {
@@ -193,6 +194,9 @@ figure {
   border: 1px solid var(--text-color);
   margin: 0;
   padding: 1rem;
+  line-height: inherit;
+  border-radius: 10px;
+  font-size: 90%;
 }
 figure * + * {
   margin-top: 1rem;

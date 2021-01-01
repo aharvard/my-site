@@ -26,7 +26,7 @@ They may not be great candidates for full-fledged single-page apps (at the time 
 ### As Defined by Webcomponents.org:
 
 <figure>
-  <blockquote>...a set of web platform APIs that allow you to create new custom, reusable, encapsulated HTML tags to use in web pages and web apps... [web components] work across modern browsers, and can be used with any JavaScript library or framework that works with HTML.</blockquote>
+  <blockquote>... a set of web platform APIs that allow you to create new custom, reusable, encapsulated HTML tags to use in web pages and web apps... [web components] work across modern browsers, and can be used with any JavaScript library or framework that works with HTML.</blockquote>
   <figcaption>Read more in their <a href="https://www.webcomponents.org/introduction" target="_blank">introduction article</a> at webcomponents.org</figcaption>
 </figure>
 
