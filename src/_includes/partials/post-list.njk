@@ -10,10 +10,10 @@
           <h3 class="post__title">
             {{post.data.title}}
           </h3>
-          <span class="post__date">{{post.date | readableDate}}</span>
+          <span class="post__date text-style-meta-1">{{post.date | readableDate}}</span>
           <div class="post__topics">
             {% for topic in post.data.topics %}
-              <span class="post__topic">{{topic}}{{"," if topic !== post.data.topics[post.data.topics.length - 1]}}</span>
+              <span class="post__topic text-style-meta-1">{{topic}}{{" • " if topic !== post.data.topics[post.data.topics.length - 1]}}</span>
             {% endfor %}
           </div>
           <p class="post__description">{{post.data.description}}</p>

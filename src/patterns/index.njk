@@ -18,7 +18,7 @@ patterns: true
 
 {% pattern "Hero"%}
 {% import "../_includes/partials/hero.njk" as heroMacro %}
-{{heroMacro.hero(heading = "Hero Heading", blurb="blurb text", topics = ["topic", "topic", "topic"])}}
+{{heroMacro.hero(heading = "Really Really Long Multiple Line Hero Heading", date="date", blurb="blurb", topics = [ "Topic One", "Topic Two"])}}
 {% endpattern %}
 
 {% pattern "Colors"%}
@@ -40,7 +40,7 @@ patterns: true
 </div>
 {% endpattern %}
 
-{% pattern "Page Body & Text Styles"%}
+{% pattern "Page Body"%}
 <div class="site-container">
   <div class="page-body">
     <h1>Heading 1</h1>
@@ -56,7 +56,21 @@ patterns: true
       <li>list item</li>
     </ul>
     <p> Show belly need to check on human, have not seen in an hour might be dead oh look, human is alive, hiss at human, feed me furrier and even more furrier hairball yet this human feeds me, i should be a god. It's 3am, time to create some chaos scratch. Play with twist ties bite nose of your human so stare at guinea pigs eat plants, meow, and throw up because i ate plants or you call this cat food. Damn that dog . Tweeting a baseball licks your face catch mouse and gave it as a present but lick butt and make a weird face for hack up furballs and meow in empty rooms. Wack the mini furry mouse tweeting a baseball but love you, then bite you for scratch me there, elevator butt get my claw stuck in the dog's ear eats owners hair then claws head.</p>
+  </div>
+</div>
+{% endpattern %}
+{% pattern "Text Styles"%}
+<div class="site-container">
+  <div class="page-body">
+    <hr>
+    <div class="text-style-display-1">Text Style Display 1</div>
+    <hr>
+    <div class="text-style-display-2">Text Style Display 2</div>
+    <hr>
+    <div class="text-style-meta-1">Text Style Meta 1</div>
+    <hr>
     <a class="text-style-nav-link" href="/">Text Style Nav Link</a>
+    <hr>
   </div>
 </div>
 {% endpattern %}
@@ -78,10 +92,10 @@ patterns: true
     {{postLinksMacro.nextPrevPostLinks(
         previousPost = {
           data: {title: "Previous Post"}, 
-          url: "/"}, 
+          url: "#"}, 
         nextPost = {
           data: {title: "Next Post"}, 
-          url: "/"})
+          url: "#"})
       }}
   </div>
 </div>
@@ -91,7 +105,7 @@ patterns: true
 
         nextPost = {
           data: {title: "Next Post"}, 
-          url: "/"})
+          url: "#"})
       }}
 
   </div>
@@ -101,7 +115,7 @@ patterns: true
     {{postLinksMacro.nextPrevPostLinks(
         previousPost = {
           data: {title: "Previous Post"}, 
-          url: "/"})
+          url: "#"})
       }}
   </div>
 </div>

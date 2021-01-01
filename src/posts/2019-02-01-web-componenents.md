@@ -1,5 +1,5 @@
 ---
-title: Web Components in 2019
+title: Web Components in 2019 Lorem ipsum set dolar lorem amet
 description: Web Components represent a collection of browser specifications that allow designers and developers to create and reuse custom HTML tags that can deliver scoped styles and custom behaviors.
 tags:
   - post

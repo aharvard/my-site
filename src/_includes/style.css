@@ -137,8 +137,9 @@ li,
 blockquote {
   line-height: 1.75;
 }
-p a {
-  font-weight: 600;
+p a,
+li a {
+  font-weight: 700;
 }
 
 li + li:not([class]) {
@@ -153,7 +154,7 @@ button {
   color: var(--button-text);
   cursor: pointer;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 700;
   padding: 10px 15px;
 }
 
@@ -183,13 +184,6 @@ a.button {
   text-decoration: none;
 }
 
-.text-style-nav-link {
-  font-weight: 600;
-  font-size: 1rem;
-  color: var(--text-color);
-  text-decoration: none;
-}
-
 figure {
   border: 1px solid var(--text-color);
   margin: 0;
@@ -206,6 +200,35 @@ figcaption {
 }
 blockquote {
   margin: 0;
+}
+
+/* TEXT STYLES */
+.text-style-nav-link {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.text-style-display-1 {
+  font-size: clamp(2.25rem, 5vw, 5rem);
+  line-height: 1.2;
+  margin: 0;
+  font-weight: 900;
+}
+
+.text-style-display-2 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  line-height: 1;
+  font-weight: 900;
+}
+
+.text-style-meta-1 {
+  line-height: 1;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: clamp(0.75rem, 2vw, 1rem);
+  letter-spacing: 0.25ch;
 }
 
 /* HEADER */
@@ -419,33 +442,21 @@ blockquote {
   flex-direction: column;
   justify-content: flex-start;
   min-height: 180px;
-  padding-bottom: 3rem;
+  padding-top: 1rem;
+  padding-bottom: 7rem;
   position: relative;
 }
 
 .hero .site-container * + * {
-  margin-top: 1rem;
+  margin-top: clamp(0.5rem, 1vw, 1rem);
 }
 
 .hero__heading {
-  font-size: clamp(2.25rem, 5vw, 5rem);
-  line-height: 1;
   margin: 0;
-  font-weight: 900;
-}
-.hero__blurb,
-.hero__blurb * {
-  font-size: clamp(1.5rem, 3vw, 2rem);
-  line-height: 1;
-  font-weight: 900;
-}
-.hero__topics {
-  width: 40vw;
 }
 
-.hero__topics .post__topic {
-  line-height: 1;
-  font-size: clamp(0.75rem, 2vw, 1rem);
+.hero__topics {
+  width: 40vw;
 }
 
 .hero--home .site-container {
@@ -453,7 +464,7 @@ blockquote {
 }
 
 .hero__img--headshot {
-  font-size: clamp(0.75rem, 2.5vw, 1.5rem);
+  font-size: clamp(0.75rem, 2.5vw, 1.25rem);
   height: 10em;
   width: 10em;
   border-radius: 10em;
@@ -462,7 +473,6 @@ blockquote {
   position: absolute;
   right: 10vw;
   bottom: -10%;
-  /* z-index: 1; */
 }
 
 /* NEXT PREV POST LINKS*/
@@ -585,20 +595,15 @@ blockquote {
 .post__date {
   margin: 0;
   grid-area: date;
-  font-size: 80%;
+  /* font-size: 80%; */
   align-self: center;
 }
 
 .post__topics {
   grid-area: topics;
-  text-transform: uppercase;
 }
 
 .post__topic {
-  text-transform: uppercase;
-  letter-spacing: 0.2ch;
-  font-weight: 600;
-  font-size: 1rem;
 }
 
 .post__description {
@@ -663,6 +668,7 @@ blockquote {
   }
   .hero__img--headshot {
     left: 60vw;
+    bottom: -10%;
   }
   .page-body {
     padding-right: 25%;
@@ -707,6 +713,7 @@ blockquote {
     align-items: flex-start;
     flex-direction: column;
   }
+
   .text-style-nav-link {
     font-size: 1.25rem;
   }

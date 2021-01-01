@@ -40,7 +40,6 @@ function renderThemeToggle() {
     if (themPref) {
       isDark = themPref.isDark;
       isLight = themPref.isLight;
-      console.log('local storage restored', {themPref});
     }
   }
   restoreFromLocalStorage();
