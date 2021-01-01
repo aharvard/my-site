@@ -18,10 +18,10 @@ They may not be great candidates for full-fledged single-page apps (at the time 
 
 “Web Components” represent a collection of browser specifications that allow designers and developers to create and reuse custom HTML tags that can deliver scoped styles and custom behaviors—the specs are:
 
-- [**Custom Elements**](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements): create your own HTML tags—B.Y.O.T(ag).
-- [**Shadow DOM**](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM): provide scoped styles and behaviors by isolating DOM nodes (sounds spooky)
-- [**HTML Templates**](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_templates_and_slots): define element structure and expose "entry-points" (slots) to pass in children elements
-- [**JavaScript Modules**](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/): export and import reusable code
+- [Custom Elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements): create your own HTML tags—B.Y.O.T(ag).
+- [Shadow DOM](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM): provide scoped styles and behaviors by isolating DOM nodes (sounds spooky)
+- [HTML Templates](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_templates_and_slots): define element structure and expose "entry-points" (slots) to pass in children elements
+- [JavaScript Modules](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/): export and import reusable code
 
 ### As Defined by Webcomponents.org:
 
