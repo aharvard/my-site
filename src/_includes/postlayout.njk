@@ -1,0 +1,27 @@
+---
+layout: baselayout.njk
+showHeaderName: true
+heroBlurb: "Im the default Hero Blurb"
+minHeight: auto
+---
+
+{% import "./partials/hero.njk" as heroMacro %}
+{% import "./partials/post-list.njk" as postMacro %}
+{% import "./partials/next-prev-post-links.njk" as postLinksMacro %}
+
+{{heroMacro.hero(heading = title, date=page.date | readableDate, topics = topics, headshot=true)}}
+
+<div class="site-container">
+  <div class="page-body" style="--page-body-min-height:{{minHeight}}">
+    <div></div>
+    <div class="post-content">
+      {{ content | safe }}
+    </div>
+
+    {% set previousPost = collections.post | getPreviousCollectionItem(page) %}
+    {% set nextPost = collections.post | getNextCollectionItem(page) %}
+
+    {{postLinksMacro.nextPrevPostLinks(previousPost, nextPost)}}
+
+  </div>
+</div>

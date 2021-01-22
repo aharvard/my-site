@@ -1,0 +1,61 @@
+---
+title: Andrew Harvard
+description: Senior UX Engineer with a decade of UX Design experince.
+header: true
+footer: true
+showHeaderName: false
+pattern: false
+---
+
+{% set css %}
+{% include "./style-processed-postcss.css" %}
+{% endset %}
+
+{% set codeStyle %}
+{% include "./code.css" %}
+{% endset %}
+
+{% set js %}
+{% include "./script.js" %}
+{% endset %}
+
+{% import "./partials/header.njk" as headerMacro %}
+{% import "./partials/footer.njk" as footerMacro %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="{{description}}"/>
+    <title>{{title}}{{ " | Andrew Harvard" if title !== "Andrew Harvard" }}</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <style>
+      {{css | cssmin | safe}}
+      {{codeStyle | cssmin | safe}}
+    </style>
+    <title>{{ title }}</title>
+  </head>
+  <body class="body light">
+    {% if header %}
+      {{headerMacro.header(showHeaderName)}}
+    {% endif %}
+
+    {% if patterns %}
+      {{ content | safe }}
+    {% else %}
+      <main class="main">
+        {{ content | safe }}
+      </main>
+    {% endif %}
+    {% if footer %}
+      {{footerMacro.footer()}}
+    {% endif %}
+    <script>
+      {{ js | jsmin | safe }}
+    </script>
+  </body>
+
+</html>

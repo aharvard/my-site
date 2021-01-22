@@ -1,0 +1,16 @@
+{% macro linkTile(href = "default", title = "title", description, cta, tags) %}
+  <article class="link-tile">
+    <a class="link-tile__link" href="{{href}}">
+      <h2 class="link-tile__heading">
+        {{ title }}
+      </h2>
+      <p>{{description}}</p>
+      <p class="link-tile__cta">{{cta}}</p>
+      <p class="link-tile__tag-list">
+        {% for tag in tags %}
+          <span class="link-tile__tag">{{tag}}{{"," if tag !== tags[tags.length - 1]}}</span>
+        {% endfor %}
+      </p>
+    </a>
+  </article>
+{% endmacro %}

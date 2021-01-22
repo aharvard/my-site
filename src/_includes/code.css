@@ -1,0 +1,162 @@
+/* General */
+
+pre[class*='language-'],
+code[class*='language-'],
+code {
+  font-weight: 600;
+  color: var(--code-base-color);
+  font-size: 1rem;
+  text-shadow: none;
+  font-family: Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console',
+    'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
+    'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier,
+    monospace;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  line-height: 1.5;
+
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+pre[class*='language-']::selection,
+code[class*='language-']::selection {
+  text-shadow: none;
+  background: var(--code-selected-color);
+}
+
+/* Blocks */
+pre[class*='language-'] {
+  padding: 1em;
+  margin: 0.5em 0;
+  overflow: auto;
+  background: var(--code-block-background);
+  border-radius: 10px;
+}
+
+/* Inline code */
+:not(pre) > code[class*='language-'],
+:not(pre) > code {
+  padding: 0.1em 0.3em;
+  border-radius: 4px;
+  color: var(--code-inline-code-color);
+  background: var(--code-inline-code-background);
+}
+
+:not(pre) > code {
+  font-size: 90%;
+  position: relative;
+  top: -0.05em;
+  padding: 0.2em 0.35em;
+}
+
+/* Tokens */
+
+.namespace {
+  opacity: 0.7;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: var(--code-comment-color);
+}
+
+.token.punctuation {
+  color: var(--code-punctuation-color);
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: var(--code-property-color);
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: var(--code-selector-color);
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: var(--code-operator-color);
+  background: var(--code-operator-background);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: var(--code-keyword-color);
+}
+
+.token.function {
+  color: var(--code-function-color);
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+  color: var(--code-variable-color);
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+/* Line highlighting */
+
+pre[data-line] {
+  position: relative;
+}
+
+pre[class*='language-'] > code[class*='language-'] {
+  position: relative;
+  z-index: 1;
+}
+
+.line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: var(--code-padding-top);
+
+  background: var(--code-highlight-background);
+  box-shadow: inset 5px 0 0 var(--code-highlight-accent);
+
+  z-index: 0;
+
+  pointer-events: none;
+
+  line-height: inherit;
+  white-space: pre;
+}

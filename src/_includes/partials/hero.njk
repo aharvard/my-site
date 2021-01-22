@@ -1,0 +1,30 @@
+{% macro hero(heading = "Heading", date = false, blurb = false, class = false, headshot = true, topics = false) %}
+  <div class="hero{{" " + class if class }}">
+    <div class="hero__background">
+      <div class="site-container">
+        {% if date %}
+          <div class="hero__blurb text-style-meta-1">
+            {{date | safe}}
+          </div>
+        {% endif %}
+        <h1 class="hero__heading text-style-display-1">{{heading}}</h1>
+        {% if topics %}
+          <div class="hero__topics">
+            {% for topic in topics %}
+              <span class="post__topic text-style-meta-1">{{topic}}{{" • " if topic !== topics[topics.length - 1]}}</span>
+            {% endfor %}
+          </div>
+        {% endif %}
+        {% if blurb %}
+          <div class="hero__blurb text-style-meta-1">
+            {{blurb | safe}}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+
+    {% if headshot %}
+      <img class="hero__img--headshot"src="/assets/gta-headshot-site-hero.jpg" alt="Andrew smiling wearing an orange button-down shirt">
+    {% endif %}
+  </div>
+{% endmacro %}

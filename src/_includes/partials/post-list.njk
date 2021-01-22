@@ -1,0 +1,25 @@
+{% macro postList(postData, numberOfPosts = 2) %}
+  <div class="posts">
+    <h2>Recent Posts</h2>
+
+    {% for post in postData
+      .slice(postData.length - numberOfPosts, postData.length)
+      .reverse() %}
+      <a class="post post__link" href="{{post.url}}">
+        <div class="post__content">
+          <h3 class="post__title">
+            {{post.data.title}}
+          </h3>
+          <span class="post__date text-style-meta-1">{{post.date | readableDate}}</span>
+          <div class="post__topics">
+            {% for topic in post.data.topics %}
+              <span class="post__topic text-style-meta-1">{{topic}}{{" • " if topic !== post.data.topics[post.data.topics.length - 1]}}</span>
+            {% endfor %}
+          </div>
+          <p class="post__description">{{post.data.description}}</p>
+
+        </div>
+      </a>
+    {% endfor %}
+  </div>
+{% endmacro %}

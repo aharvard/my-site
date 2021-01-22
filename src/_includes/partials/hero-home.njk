@@ -1,0 +1,7 @@
+{% import "./hero.njk" as homeHeroMacro %}
+
+{{homeHeroMacro.hero(
+  heading="Hi, I'm Andrew.", 
+  class="hero--home",
+  blurb='<div title="preferred pronouns" aria-label="and my preferred pronouns are he and him">he / him</div>',
+  headshot=true)}}

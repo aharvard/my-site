@@ -1,0 +1,17 @@
+---
+title: Posts
+layout: baselayout.njk
+showHeaderName: true
+description: Various blog posts about web developement.
+---
+
+{% import "../_includes/partials/hero.njk" as heroMacro %}
+{% import "../_includes/partials/post-list.njk" as postMacro %}
+
+{{heroMacro.hero(heading = title, blurb=false, headshot=true)}}
+
+<div class="site-container">
+  <div class="page-body" >
+    {{postMacro.postList(postData = collections.post, numberOfPosts=collections.post.length) }}
+  </div>
+</div>

@@ -1,0 +1,15 @@
+{% macro header(showHeaderName) %}
+  <header class="header">
+    <div class="site-container">
+      {% if showHeaderName %}
+        <div class="header__home-link-container">
+          <a class="header__home-link text-style-nav-link" href="/">Andrew Harvard</a>
+        </div>
+      {% endif %}
+      <div class="header__menu-button-container"></div>
+      <div class="modal ">
+        {% include "./nav.njk" %}
+      </div>
+    </div>
+  </header>
+{% endmacro %}

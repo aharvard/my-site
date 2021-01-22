@@ -1,12 +1,10 @@
-const footerDateSpan = document.getElementById('footer-date');
-const year = new Date();
-footerDateSpan.innerText = year.getFullYear();
+const body = document.querySelector('body');
 
-function themeToggle() {
+function renderThemeToggle() {
   // Create DOM
-  const body = document.querySelector('body');
-  const footer = document.querySelector('footer');
+  const footer = document.querySelector('.footer__content');
   const themeButton = document.createElement('button');
+  themeButton.classList.add('theme-toggle-button');
   footer.insertAdjacentElement('afterbegin', themeButton);
 
   // Has the user set dark or light color scheme?
@@ -23,25 +21,31 @@ function themeToggle() {
   }
 
   // Manages adding and toggle body classes
-  function themeClass() {
-    // set class if there is none set
-    if (body.classList.length === 0) {
-      body.classList.add(isDark ? 'dark' : isLight ? 'light' : null);
+  function setThemeClass() {
+    if (isDark) {
+      body.classList.remove('light');
+      body.classList.add('dark');
     } else {
-      // toggle classes if one is set
-
-      if (isDark) {
-        body.classList.remove('light');
-        body.classList.add('dark');
-      } else {
-        body.classList.remove('dark');
-        body.classList.add('light');
-      }
+      body.classList.remove('dark');
+      body.classList.add('light');
     }
   }
 
+  function mirrorToLocalStorage() {
+    localStorage.setItem('themePref', JSON.stringify({isDark, isLight}));
+  }
+
+  function restoreFromLocalStorage() {
+    const themPref = JSON.parse(localStorage.getItem('themePref'));
+    if (themPref) {
+      isDark = themPref.isDark;
+      isLight = themPref.isLight;
+    }
+  }
+  restoreFromLocalStorage();
+
   // Set class based on current color
-  themeClass();
+  setThemeClass();
 
   // Update Button Text
   updateButtonText();
@@ -55,7 +59,8 @@ function themeToggle() {
       isDark = false;
       isLight = true;
     }
-    window.requestAnimationFrame(themeClass);
+    mirrorToLocalStorage();
+    window.requestAnimationFrame(setThemeClass);
     window.requestAnimationFrame(updateButtonText);
   });
 
@@ -63,9 +68,66 @@ function themeToggle() {
   themeButton.addEventListener('click', function () {
     isDark = !isDark;
     isLight = !isLight;
-    window.requestAnimationFrame(themeClass);
+    mirrorToLocalStorage();
+    window.requestAnimationFrame(setThemeClass);
     window.requestAnimationFrame(updateButtonText);
   });
 }
+renderThemeToggle();
 
-themeToggle();
+function renderMenuButton() {
+  const modal = document.querySelector('.modal');
+  const menuButton = document.createElement('button');
+  menuButton.classList.add('header__menu-button');
+  menuButton.innerHTML = `
+    <svg 
+      height="14px" 
+      viewBox="0 0 22 14" 
+      width="22px" 
+      class="icon-menu" 
+      aria-hidde="true"
+      overflow="visible" 
+      version="1.1" 
+      xmlns="http://www.w3.org/2000/svg" 
+      xmlns:xlink="http://www.w3.org/1999/xlink">
+        <g 
+          id="menu-lines" 
+          fill="none" 
+          fill-rule="evenodd" 
+          stroke-linecap="round" 
+          stroke-linejoin="round" 
+          stroke-width="2">
+            <line class="menu-line" id="line-top" x1="1" y1="1" x2="21" y2="1" id="Path"></line>
+            <line class="menu-line" id="line-middle-1" x1="1" y1="7" x2="21" y2="7" id="Path"></line>
+            <line class="menu-line" id="line-middle-2" x1="1" y1="7" x2="21" y2="7" id="Path"></line>
+            <line class="menu-line" id="line-bottom" x1="1" y1="13" x2="21" y2="13" id="Path"></line>
+        </g>
+      </svg>`;
+
+  document
+    .querySelector('.header__menu-button-container')
+    .insertAdjacentElement('afterbegin', menuButton);
+
+  function handleMenu() {
+    let isOpen = false;
+    return function () {
+      const main = document.querySelector('.main');
+      const footer = document.querySelector('.footer');
+      isOpen = !isOpen;
+      body.classList.toggle('menu-open');
+      modal.classList.toggle('modal--open');
+      if (main) {
+        if (isOpen) {
+          main.style.display = 'none';
+          footer.style.display = 'none';
+        } else {
+          main.style.display = 'block';
+          footer.style.display = 'block';
+        }
+      }
+      return isOpen;
+    };
+  }
+  menuButton.addEventListener('click', handleMenu());
+}
+renderMenuButton();
