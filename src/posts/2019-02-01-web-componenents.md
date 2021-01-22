@@ -12,7 +12,7 @@ Web components are ideal candidates for delivering design systems in organizatio
 
 They mitigate framework lock-in by delivering encapsulated vanilla styling and behavior.
 
-They may not be great candidates for full-fledged single-page apps (at the time of this post) due to some accessibility limitations with the shadow DOM and[Accessibility Object Model (AOM)](http://wicg.github.io/aom/explainer.html) specs.
+They may not be great candidates for full-fledged single-page apps (at the time of this post) due to some accessibility limitations with the shadow DOM and [Accessibility Object Model (AOM)](http://wicg.github.io/aom/explainer.html) specs.
 
 ## What are Web Components?
 
