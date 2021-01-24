@@ -11,13 +11,11 @@ project:
   href: https://svelte-clocks.netlify.app/
 ---
 
-## Intro
-
-<!-- What are the valuable skills and experience I have to show off? Two sentences. -->
-
 [Svelte Clocks]({{project.href}}) is an ongoing creative coding project, inspired by John Maeda’s [12 o’clocks](https://vimeo.com/198494458). Each clock is unique and developed with various techniques such as SVG, Canvas, and HTML.
 
 Got a second? Check the time at [Svelte Clocks]({{project.href}})!
+
+<iframe class="project-iframe" src="https://svelte-clocks.netlify.app/" title="Svelte clocks website" width="100%" height="800px"></iframe>
 
 ## Background
 
@@ -33,7 +31,7 @@ While P5.js is an excellent tool and makes working with graphics easy, I wanted 
 
 So I used the [SVG Clock example](https://svelte.dev/examples#clock) on the Svelte documentation site as a starting point and started making clocks!
 
-## Tech Approach
+## Technical Approach
 
 <!-- Explain in detail: subject, object, verb. -->
 

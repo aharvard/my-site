@@ -15,7 +15,7 @@ I got inspired to make a digital version of a physical tool that helps with desi
 
 Check out [Critique Cards]({{project.href}})!
 
-![Two critique cards, one showing the back and the other showing the front face](/assets/critique-cards-post-graphic.jpg)
+<iframe class="project-iframe" src="https://critique-cards.netlify.app/" title="Critique cards website" width="100%" height="800px"></iframe>
 
 ## Background
 
@@ -35,7 +35,7 @@ To solve this issue, I wanted to make a digital version of this deck of cards. I
 
 Making this physical experience digital was the perfect opportunity to learn Svelte and practice JavaScript fundamentals.
 
-## How it Works
+## Technical Approach
 
 The [Critique Cards website](critique-cards.netlify.app/) is built with [Svelte](https://svelte.dev/) and hosted on [Netlify](https://www.netlify.com/).
 

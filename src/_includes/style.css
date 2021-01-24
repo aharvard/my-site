@@ -643,6 +643,11 @@ blockquote {
   height: 100%;
 }
 
+/* IFRAME */
+.project-iframe {
+  border: 10px solid var(--text-color);
+}
+
 /* SMALL BREAKPOINT AND UP*/
 @media (min-width: 700px) {
   html {
