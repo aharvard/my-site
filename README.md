@@ -1,5 +1,10 @@
 # Personal Site
 
-This is my personal website!
+My personal website.
 
-It's a static website built with Eleventy and some good ol' fashioned vanilla CSS and JavaScript. Don't run JS? No problem. I've progressively enhanced the site so that it works regardless.
+## Tech Used
+
+- Templated with Nunjucks & Eleventy
+- Hosted on Netlify
+- Vanilla CSS Autoprefixer wit PostCSS
+- Vanilla JavaScript
